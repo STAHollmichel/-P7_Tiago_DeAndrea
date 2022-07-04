@@ -9,6 +9,7 @@ module.exports = (sequelize, DataTypes) => {
   class Post extends Model {
     static associate(models) {
       Post.belongsTo(models.User, { foreignKey: 'userId' })
+      Post.hasMany(models.Comment) 
     }
   };
 
@@ -17,7 +18,6 @@ module.exports = (sequelize, DataTypes) => {
       type:DataTypes.INTEGER,
             allowNull: false
     },
-    postTitle: DataTypes.TEXT,
     postDescription: DataTypes.TEXT,
     postPhoto: DataTypes.STRING,
     userLike: DataTypes.INTEGER,

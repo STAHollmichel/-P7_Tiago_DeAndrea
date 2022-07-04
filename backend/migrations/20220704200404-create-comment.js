@@ -3,7 +3,7 @@
 module.exports = {
 
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Posts', {
+    await queryInterface.createTable('Comments', {
 
       id: {
         allowNull: false,
@@ -13,24 +13,26 @@ module.exports = {
       },
       userId: {
         type: Sequelize.INTEGER,
-        allowNull: false,
-        references: {
+          allowNull: false,
+          references: {
             model: 'Users',
             key: 'id'
-        },
+          },
+            onDelete: 'CASCADE'
       },
-      postDescription: {
-        type: Sequelize.TEXT
+      postId: {
+        type: Sequelize.INTEGER,
+          allowNull: false,
+          references: {
+            model: 'Posts',
+              key: 'id'
+          },
+        onDelete: 'CASCADE'
       },
-      postPhoto: {
-        type: Sequelize.STRING
+      commentDescription: {
+        type: Sequelize.TEXT,
+        allowNull: false
       },
-	    userLike: {
-	      type: Sequelize.INTEGER,
-   	  },
-      usersLiked: {
-	      type: Sequelize.STRING,
-      }, 
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
@@ -41,8 +43,8 @@ module.exports = {
       }
     });
   },
-
+  
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Posts');
+    await queryInterface.dropTable('Comments');
   }
 };

@@ -1,12 +1,11 @@
 const express = require('express'); // L'import d'express
 const router = express.Router(); // Création du router via express
-const auth = require('../middleware/auth');
 
 // L'import du contrôleur user
 const userCtrl = require('../controllers/user');
 
-// L'import des middlewares
-
+// L'import du middlewares
+const auth = require('../middleware/auth'); 
 
 
 // Route POST pour enregistrer des contes utilisateurs   
