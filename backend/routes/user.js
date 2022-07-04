@@ -15,9 +15,11 @@ router.post('/signup', userCtrl.signup);
 router.post('/login', userCtrl.login);
 
 
-// routes de l'utilisateur
+// Route pour selecioner l'utilisateur
 router.get('/', auth, userCtrl.getOneUser);
+// Route pour modifier l'utilisateur
 router.put('/', auth, userCtrl.updateUser);
+// Route pour effacer l'utilisateur
 router.delete('/', auth, userCtrl.deleteUser);
 
 
