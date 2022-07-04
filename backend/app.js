@@ -1,10 +1,18 @@
 const express = require('express'); // L'import d'express
+// const path = require('path');
+
+
+// Import des routes
+const userRoutes = require('./routes/user');
+
+
 
 
 // Création de l'application express
 const app = express();
 
-
+// Config de sécurité de variables
+require('dotenv').config();
     
 // Gestion CORS [API ACCESS CONTROL]
 app.use((req, res, next) => {
@@ -18,7 +26,13 @@ app.use((req, res, next) => {
 // Parsing body en JSON
 app.use(express.json());
 
+// Gestion ressource d'images
+// app.use('/images', express.static(path.join(__dirname, 'images')));
 
+// Gestion des routes
+app.use('/api/auth', userRoutes);
+// app.use('/api/posts', postsRoutes);
+// app.use('/api/comments', commentsRoutes);
 
 // Exportation de l'app
 module.exports = app; 
