@@ -1,11 +1,13 @@
 'use strict';
+
 const {
   Model
 } = require('sequelize');
+
 module.exports = (sequelize, DataTypes) => {
   class User extends Model {
     static associate(models) {
- 
+      User.hasMany(models.Post)
     }
   };
 
@@ -29,13 +31,15 @@ module.exports = (sequelize, DataTypes) => {
     profilePhoto: DataTypes.STRING,
     bio: DataTypes.TEXT,
     admin: {
-            type: DataTypes.BOOLEAN,
-            defaultValue: false
+      type: DataTypes.BOOLEAN,
+      defaultValue: false
     }
-  }, 
+  },
+
   {
     sequelize,
     modelName: 'User',
   });
+
   return User;
 };
