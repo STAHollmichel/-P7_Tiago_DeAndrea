@@ -1,6 +1,10 @@
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
+const db = require('../models/index');
 
+// const fs = require('fs');
+
+const { User } = db.sequelize.models;
 
 
 exports.signup = (req, res, next) => {
@@ -62,8 +66,8 @@ exports.updateUser =(req, res, next) => {
 
 
 exports.deleteUser = (req, res, next) => {
-  console.log(req.params.id);
-  User.findOne({ where: {id: req.params.id}})
+  console.log(req.auth.userId);
+  User.findOne({ where: {id: req.auth.userId} })
       .then(user => {
           console.log(user);
           // const filename = post.imageUrl.split('/images/')[1];
