@@ -4,7 +4,7 @@ const router = express.Router(); // Création du router via express
 // L'import du contrôleur user
 const userCtrl = require('../controllers/user');
 
-// L'import du middlewares
+// L'import du middleware
 const auth = require('../middleware/auth'); 
 
 

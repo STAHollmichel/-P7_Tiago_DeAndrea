@@ -6,6 +6,7 @@ import axios from 'axios';
 
 
 function PostWall() {
+    
   const [posts, setPosts] = useState([]);
 
   console.log(posts);

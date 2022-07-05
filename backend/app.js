@@ -1,10 +1,11 @@
 const express = require('express'); // L'import d'express
-// const path = require('path');
+const path = require('path');
 
 
 // Import des routes
 const userRoutes = require('./routes/user');
-
+const postsRoutes = require('./routes/posts');
+const commentsRoutes = require('./routes/comments');
 
 
 
@@ -27,12 +28,12 @@ app.use((req, res, next) => {
 app.use(express.json());
 
 // Gestion ressource d'images
-// app.use('/images', express.static(path.join(__dirname, 'images')));
+app.use('/images', express.static(path.join(__dirname, 'images')));
 
 // Gestion des routes
 app.use('/api/auth', userRoutes);
-// app.use('/api/posts', postsRoutes);
-// app.use('/api/comments', commentsRoutes);
+app.use('/api/posts', postsRoutes);
+app.use('/api/comments', commentsRoutes);
 
 // Exportation de l'app
 module.exports = app; 
