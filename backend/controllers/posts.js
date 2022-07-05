@@ -90,3 +90,52 @@ exports.getOnePost = (req, res, next) => {
     .catch((error) => res.status(400).json({ error }));
 };
 
+exports.userLikePost = (req, res, next) => {
+  const { postId } = req.params;
+  const { userId } = req.auth;
+
+  Post.findOne({ where: { id: postId } })
+    .then((post) => {
+      if (!post) {
+        return res.status(404).json({ message: 'Post introuvable' });
+      }
+
+      console.log('post.likes', post.userLike);
+
+      let newUsersLiked = [];
+      let newLikes = post.userLike;
+
+      if (!post.usersLiked.length) {
+        newUsersLiked.push(userId);
+        newLikes = newLikes + 1;
+      } else {
+        newUsersLiked = JSON.parse(post.usersLiked);
+
+        if (!newUsersLiked.includes(userId)) {
+          newUsersLiked.push(userId);
+          newLikes = newLikes + 1;
+        } else {
+          newUsersLiked = newUsersLiked.filter((el) => el !== userId);
+          newLikes = newLikes - 1;
+        }
+      }
+
+      console.log('newLikes', newLikes);
+
+      Post.update(
+        { userLike: newLikes, usersLiked: JSON.stringify(newUsersLiked) },
+        { where: { id: postId } }
+      )
+        .then(() => {
+          res.status(201).json({ message: 'ok' });
+        })
+        .catch((err) => {
+          console.log(err);
+          res.status(400).json({ err });
+        });
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json({ err });
+    });
+};
