@@ -14,7 +14,7 @@ function CommentForm() {
         console.log(data);
         console.log(params)
         axios
-            .post("http://localhost:3000/api/comments/", {...data, postId: params.id})
+            .post("http://localhost:3002/api/comments/", {...data, postId: params.id})
             .then(
                 (result) => {
                     navigate("/post/" + params.id)

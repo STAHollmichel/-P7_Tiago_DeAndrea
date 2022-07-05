@@ -1,5 +1,7 @@
-import logoIcon from '../../assets/images/icon-above-font.svg';
 import '../../custom.css';
+import logoIcon from '../../assets/images/icon-above-font.svg';
+
+
 import { NavLink, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
@@ -40,7 +42,7 @@ function Header() {
                 <NavLink to="/">Home</NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to="/account_profile">Mon Profile</NavLink>
+                <NavLink to="/account">Mon Profile</NavLink>
               </li>
             </ul>
             <div className="navbar-disconnect me-2">

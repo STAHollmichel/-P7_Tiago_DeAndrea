@@ -1,4 +1,4 @@
-
+import '../custom.css';
 import { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -9,8 +9,6 @@ import Header from '../components/layout/header';
 import SignUpFormModify from '../components/forms/user/signUpFormModify';
 
 function AccountProfile() { 
-
-    // const params = useParams();
 
     const [user, setUser] = useState({});
     const [modify, setModify] =useState(false)

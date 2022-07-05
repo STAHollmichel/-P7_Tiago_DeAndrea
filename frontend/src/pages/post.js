@@ -6,6 +6,7 @@ import Header from '../components/layout/header';
 import PostFormModify from '../components/forms/posts/postFormModify';
 
 import Footer from '../components/layout/footer';
+import CommentDisplay from './comment';
 
 
 const SinglePost = () => {
@@ -79,6 +80,7 @@ const SinglePost = () => {
               </div>
             </div>
           </div>
+          <CommentDisplay postId={post.id} />
           <div className={`popup_postEdit ${togglePopup ? 'open-popup_postEdit' : ''
             }`}
             id="popup">

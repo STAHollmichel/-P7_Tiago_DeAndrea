@@ -13,8 +13,8 @@ function Home() {
     <div className='page__wrapper'>
       <Header />
       <main className='container-fluid bg-light'>
-      <PostForm />
-      <PostWall />
+        <PostForm />
+        <PostWall />
       </main>
       <Footer />
     </div>
