@@ -1,5 +1,5 @@
 // Styles
-import './App.css';
+import './custom.css';
 
 
 
@@ -12,6 +12,10 @@ import Login from './pages/login';
 import Signup from './pages/signup';
 import Home from './pages/home'
 import AccountProfile from './pages/account';
+import SinglePost from './pages/post';
+import PostWall from './pages/wall';
+
+
 
 
 // Components
@@ -27,6 +31,8 @@ function App() {
           <Route path="/signup" element={<Signup/>} />
           <Route path="/" element={<Home/>} />
           <Route path="/account" element={<AccountProfile/>} />
+          <Route path="/post/:id" element={<SinglePost />} />
+          <Route path="/wall" element= {<PostWall/>} />
         </Routes>
       </div>
   );
