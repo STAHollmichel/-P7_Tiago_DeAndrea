@@ -14,7 +14,8 @@ import Home from './pages/home'
 import AccountProfile from './pages/account';
 import SinglePost from './pages/post';
 import PostWall from './pages/wall';
-
+import CommentForm from './components/forms/comments/commentForm';
+import CommentDisplay from './pages/comment';
 
 
 
@@ -33,6 +34,8 @@ function App() {
           <Route path="/account" element={<AccountProfile/>} />
           <Route path="/post/:id" element={<SinglePost />} />
           <Route path="/wall" element= {<PostWall/>} />
+          <Route path="/comment_create/:id" element={<CommentForm />} />
+          <Route path="/comment" element={<CommentDisplay/>} />
         </Routes>
       </div>
   );

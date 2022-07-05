@@ -28,7 +28,7 @@ const SinglePost = () => {
     .then((result) => {
       setPost(result.data);
     });
-    axios.get('http://localhost:3000/api/auth')
+    axios.get('http://localhost:3002/api/auth')
     .then(({ data }) => {
       setUser(data.user);
     });
@@ -36,7 +36,7 @@ const SinglePost = () => {
 
   const deletePost = () => {
     axios
-      .delete('http://localhost:3000/api/posts/' + params.id)
+      .delete('http://localhost:3002/api/posts/' + params.id)
       .then((result) => {
         alert('Post Suprimé!');
         navigate('/');
