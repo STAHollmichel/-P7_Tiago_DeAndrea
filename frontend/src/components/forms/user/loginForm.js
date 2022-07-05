@@ -12,7 +12,7 @@ function LoginForm() {
         console.log(data);
   
         axios
-            .post("http://localhost:3000/api/auth/login", {
+            .post("http://localhost:3002/api/auth/login", {
                 email: data.email,
                 password: data.password,
             })

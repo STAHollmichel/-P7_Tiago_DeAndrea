@@ -13,10 +13,10 @@ function SignUpForm() {
     console.log(data);
 
     axios
-      .post("http://localhost:3000/api/auth/signup", data)
+      .post("http://localhost:3002/api/auth/signup", data)
       .then((result) => {
         axios
-          .post("http://localhost:3000/api/auth/login", {
+          .post("http://localhost:3002/api/auth/login", {
           email: data.email,
           password: data.password,
           })
