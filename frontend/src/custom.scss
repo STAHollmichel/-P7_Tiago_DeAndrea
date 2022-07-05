@@ -1,5 +1,9 @@
 // Variables Override
-@import './scss/abstracts/variables.scss';
+$theme-colors: (
+    "primary": #FD2D01,
+    "secondary": #FFD7D7,
+    "tertiary": #4E5166,
+);
 
 // Import de Bootstrap et les variables par default 
 @import '../node_modules/bootstrap/scss/bootstrap.scss';

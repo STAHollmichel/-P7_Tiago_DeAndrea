@@ -3,13 +3,13 @@ import { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
 import Header from '../components/layout/header';
-import PostFormModify from '../components/forms/posts/postFormModify';
-
 import Footer from '../components/layout/footer';
+import PostFormModify from '../components/forms/posts/postFormModify';
 import CommentDisplay from './comment';
 
 
 const SinglePost = () => {
+  
   const params = useParams();
 
   const navigate = useNavigate();
@@ -59,22 +59,30 @@ const SinglePost = () => {
                 <img src={post.postPhoto} className="card-img-top" alt="Post" />
               </picture>
               <div className="card-body text-center ">
-                <p>{post.postDescription}</p>
+              {/* {posts.length
+                ? posts.map((post) => {
+                    <div>
+                      <em>
+                         Author: {post.User.firstName} {post.User.lastName}
+                      </em>
+                    <p>{post.postDescription}</p>
+                  </div>
+                })
+              : null} */}
                 {user && (user.admin || user.id === post.userId) ? (
                   <>
                     <button
                       onClick={openPopupPostEdit}
-                      className="btn btn-primary m-2"
+                      className="btn btn-tertiary m-2"
                     >
                       Editer
                     </button>
-                    <button onClick={deletePost} className="btn btn-danger m-2">
+                    <button onClick={deletePost} className="btn btn-primary m-2">
                       Effacer
                     </button>
                   </>
                 ) : null}
-
-                <button onClick={commentPost} className="btn btn-danger m-2">
+                <button onClick={commentPost} className="btn btn-secondary m-2">
                   Commenter
                 </button>
               </div>
