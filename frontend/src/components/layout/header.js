@@ -1,5 +1,5 @@
 import logoIcon from '../../assets/images/icon-above-font.svg';
-import '../../App.css';
+import '../../custom.css';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 

@@ -1,0 +1,9 @@
+main {
+  height: 100vh;
+}
+
+a:-webkit-any-link {
+  color: white;
+  text-decoration: none;
+}
+/*# sourceMappingURL=main.css.map */

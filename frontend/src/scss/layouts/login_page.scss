@@ -1,0 +1,60 @@
+#main_login {
+    height: 100vh;
+    background: rgb(78,81,102);
+    background: linear-gradient(0deg, rgba(78,81,102,1) 0%, rgba(246,224,224,1) 1%, rgba(255,215,215,1) 11%, rgba(255,255,255,1) 55%, rgba(255,255,255,1) 100%);
+    text-align: center;
+}
+
+
+.landingPage-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+.form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+    .form-floating:focus-within {
+      z-index: 2;
+    }
+      input[type="email"] {
+        margin-bottom: -1px;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+      input[type="password"] {
+        margin-bottom: 10px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+      }
+}
+
+#login_reg_seperator {
+    display: block;
+    overflow: hidden;
+    text-align: center;
+    white-space: nowrap;
+}
+
+#login_reg_bars {
+    display: inline-block;
+    position: relative;
+    &:before { 
+      margin-right: 15px;
+      right: 100%;
+    }
+    &:after {
+      left: 100%;
+      margin-left: 15px;
+    }
+    &:before, &:after {
+      background: #ccd0d5;
+      content: '';
+      height: 1px;
+      position: absolute;
+      top: 50%;
+      width: 9999px;
+    }
+}

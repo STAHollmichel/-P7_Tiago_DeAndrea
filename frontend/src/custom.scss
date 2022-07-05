@@ -1,0 +1,16 @@
+// Variables Override
+@import './scss/abstracts/variables.scss';
+
+// Import de Bootstrap et les variables par default 
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+
+@import './scss/base/typography.scss';
+@import './scss/base/body.scss';
+@import './scss/base/main.scss';
+
+@import './scss/components/buttons.scss';
+
+@import './scss/layouts/login_page.scss';
+@import './scss/layouts/signup_page.scss';
+@import './scss/layouts/post_page.scss';
