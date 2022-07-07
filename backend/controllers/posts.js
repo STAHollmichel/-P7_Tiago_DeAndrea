@@ -49,7 +49,9 @@ exports.modifyPost = (req, res, next) => {
 
 exports.deletePost = (req, res, next) => {
   console.log(req.params.id);
-  Post.findOne({ where: { id: req.params.id } })
+  Post.findOne({ where: { id: req.params.id }, 
+    include: User
+  })
     .then((post) => {
       console.log(post);
 
