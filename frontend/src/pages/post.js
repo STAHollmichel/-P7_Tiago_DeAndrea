@@ -1,11 +1,15 @@
+import { FaRegCommentDots, FaRegEdit, FaRegWindowClose, FaTrashAlt, FaUserAlt } from 'react-icons/fa';
+
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
-import Header from '../components/layout/header';
+import Nav from '../components/layout/nav';
 import Footer from '../components/layout/footer';
 import PostFormModify from '../components/forms/posts/postFormModify';
 import CommentDisplay from './comment';
+
+
 
 
 const SinglePost = () => {
@@ -51,50 +55,64 @@ const SinglePost = () => {
   if (post) {
     return (
       <div className="page__wrapper">
-        <Header />
-        <main className="container-fluid bg-light" id="main-post_single">
-          <div className="container pt-3 col-lg-5">
-            <div className="card mb-3">
+        <Nav />
+        <main className="container-fluid bg-light" id="main-post">
+          <div className="container pt-3 col-lg-4">
+            <section className="card mb-3 bg-white border shadow-sm">
+              <article className='card-body text-center'>
+                <div className='container border-bottom d-flex justify-content-between'>
+                  <div className='d-flex' id='post-user-name'>
+                    <FaUserAlt />
+                    {/* <h1 className='pt-2 ps-3'>{post.User.firstName} {post.User.lastName}</h1> */}
+                  </div>
+                  <p className='pt-2 pe-3 text-muted' id='post-timestamp'>{post.createdAt}</p>
+                </div>
+                <div className='border-bottom'>
+                  <p className='p-3'>{post.postDescription}</p>
+                </div>
+              </article>
               <picture>
-                <img src={post.postPhoto} className="card-img-top" alt="Post" />
+                <img src={post.postPhoto} className="card-img-fluid" alt="Post" />
               </picture>
               <div className="card-body text-center ">
-              {/* {posts.length
-                ? posts.map((post) => {
-                    <div>
-                      <em>
-                         Author: {post.User.firstName} {post.User.lastName}
-                      </em>
-                    <p>{post.postDescription}</p>
-                  </div>
-                })
-              : null} */}
-                {user && (user.admin || user.id === post.userId) ? (
-                  <>
-                    <button
-                      onClick={openPopupPostEdit}
-                      className="btn btn-tertiary m-2"
-                    >
-                      Editer
-                    </button>
-                    <button onClick={deletePost} className="btn btn-primary m-2">
-                      Effacer
-                    </button>
-                  </>
-                ) : null}
-                <button onClick={commentPost} className="btn btn-secondary m-2">
-                  Commenter
-                </button>
+                <div className='border-top d-flex justify-content-between'>
+                  <button onClick={commentPost} className="d-flex btn m-2" id='btn-post-comment'>
+                    <FaRegCommentDots />
+                    <p className='ps-1'>Commenter</p>
+                  </button>
+                  {user && (user.admin || user.id === post.userId) ? (
+                    <>
+                      <div className='d-flex'>
+                        <button onClick={openPopupPostEdit} className="btn m-2 d-flex" id='btn-post-edit'>
+                          <FaRegEdit />
+                          <p>Editer</p>
+                        </button>
+                        <button onClick={deletePost} className="btn m-2 d-flex" id='btn-post-delete'>
+                          <FaTrashAlt />
+                          <p>Effacer</p>
+                        </button>
+                      </div>
+                    </>
+                  ) : null}
+                </div>
               </div>
-            </div>
+            </section>
           </div>
           <CommentDisplay postId={post.id} />
-          <div className={`popup_postEdit ${togglePopup ? 'open-popup_postEdit' : ''
-            }`}
+          <div className={`popup_postEdit ${togglePopup ? 'open-popup_postEdit' : ''}`}
             id="popup">
-                <p onClick={openPopupPostEdit}>Fermer</p>
-                 <PostFormModify id={post.id} />
-          </div>
+                <div className='card border shadow'>
+                  <div className='d-flex '>
+                    <div className='p-3'>
+                      <FaRegEdit />
+                    </div>
+                    <p onClick={openPopupPostEdit} className='btn pt-3 d-flex' id='btn-close-edit-post'>
+                    <FaRegWindowClose />
+                    </p>
+                  </div>
+                  <PostFormModify id={post.id} />
+                  </div>
+                </div>
         </main>
         <Footer />
       </div>
@@ -102,7 +120,7 @@ const SinglePost = () => {
   } else {
     return (
       <div>
-        <Header />
+        <Nav/>
         <main>
           <div className="container mt-3">
             <div className="card mb-3">

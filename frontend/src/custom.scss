@@ -1,20 +1,26 @@
 // Variables Override
 $theme-colors: (
-    "primary": #FD2D01,
+    "primairy": #FD2D01,
     "secondary": #FFD7D7,
     "tertiary": #4E5166,
 );
 
+
 // Import de Bootstrap et les variables par default 
-@import '../node_modules/bootstrap/scss/bootstrap.scss';
+// @import "~bootstrap/scss/bootstrap";
 
+@import './scss/abstracts/_variables.scss';
 
-@import './scss/base/typography.scss';
-@import './scss/base/body.scss';
-@import './scss/base/main.scss';
+@import './scss/base/_typography.scss';
+@import './scss/base/_body.scss';
+@import './scss/base/_main.scss';
 
-@import './scss/components/buttons.scss';
+@import './scss/components/_buttons.scss';
+@import './scss/components/_nav';
+@import './scss/components/_login_footer.scss';
+@import './scss/components/_footer.scss';
 
-@import './scss/layouts/login_page.scss';
-@import './scss/layouts/signup_page.scss';
-@import './scss/layouts/post_page.scss';
+@import './scss/layouts/_login_page.scss';
+@import './scss/layouts/_signup_page.scss';
+@import './scss/layouts/_post_page.scss';
+@import './scss/layouts/wall_page';

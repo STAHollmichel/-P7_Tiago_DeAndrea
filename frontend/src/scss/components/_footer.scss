@@ -1,0 +1,10 @@
+#home_footer {
+    background-color: $color_tertiary;
+    a {
+        color: $color_secondary;
+        text-decoration: none;
+        &:hover { color: $color_primary;
+         
+        }
+    }
+}

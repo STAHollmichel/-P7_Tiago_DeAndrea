@@ -1,0 +1,32 @@
+
+
+.page_wrapper{
+  min-height: calc(100vh - 70px);
+}
+
+// a:-webkit-any-link {
+//     color: $color_tertiary;
+//     text-decoration: none;
+//     &:hover { color:#FD2D01
+     
+//     }
+    
+// }
+
+
+ul {
+    list-style-type: none;
+}
+
+.li-bdl-cs {
+    border-left: solid 1px $color_secondary;
+}
+
+ .li-bdl-ct{
+  border-left: solid 1px $color_tertiary;
+}
+
+.container-fluid{ 
+  padding-left: 0rem;
+  padding-right: 0rem; 
+}

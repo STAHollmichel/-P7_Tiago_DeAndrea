@@ -1,0 +1,9 @@
+#login_footer {
+  background-color: #fff;
+  a {
+    color: $color_tertiary;
+    text-decoration: none;
+    &:hover { color: $color_primary;
+    }
+  }
+}

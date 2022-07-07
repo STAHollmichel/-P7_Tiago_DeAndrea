@@ -1,0 +1,180 @@
+.btn-secondary {
+    color: #fff;
+    background-color: #FFD7D7;
+    border-color: #FFD7D7;
+}
+
+#btn-publish {
+    position: relative;
+    color: $color_tertiary;
+    font-weight: 800;
+    svg { 
+        position: absolute;
+        top: 10px;
+        left: -11px;
+
+    }
+    p { 
+         margin: 0;
+    }
+    &:hover {
+        color: $color_primary;
+    }
+}
+
+#btn-photo-upload {
+    position: relative;
+    color: $color_tertiary;
+    font-weight: 800;
+    svg { 
+        position: absolute;
+        top: 10px;
+        left: -17px;
+
+    }
+    p { 
+         margin: 0;
+    }
+    &:hover {
+        color: $color_primary;
+    }
+}
+
+.navbar-disconnect {
+    button {
+        color: $color_tertiary;
+        &:hover {
+            color: $color_primary;
+        }
+    }
+    #btn-logout{
+        svg {
+            stroke-width: 3;
+        }
+    }
+}
+
+
+
+#btn-checkout-post{
+    position: relative;
+    color: $color_tertiary;
+    font-weight: 800;
+    svg { 
+        position: absolute;
+        top: 20px;
+        left: -12px;
+
+    }
+    p { 
+         margin: 0;
+    }
+    &:hover {
+        color: $color_primary;
+    }
+}
+
+#btn-like {
+    position: relative;
+    color: $color_tertiary;
+    font-weight: 800;
+    svg {
+        stroke-width: 2.5;
+        position: absolute;
+        top: 20px;
+        left: -10px;
+
+    }
+    p { 
+         margin: 0;
+    }
+    &:hover {
+        color: $color_primary;
+    }
+    #like-counter {
+        color: $color_primary;
+        &:hover {
+            color: $color_tertiary;
+        }
+    }
+}
+
+
+#btn-post-edit {
+    position: relative;
+    color: $color_tertiary;
+    font-weight: 800;
+    svg { 
+        position: absolute;
+        top: 10px;
+        left: -15px;
+
+    }
+    p { 
+         margin: 0;
+    }
+    &:hover {
+        color: $color_primary;
+    }
+}
+
+#btn-post-delete {
+    position: relative;
+    color: $color_tertiary;
+    font-weight: 800;
+    svg { 
+        position: absolute;
+        top: 10px;
+        left: -15px;
+
+    }
+    p { 
+         margin: 0;
+    }
+    &:hover {
+        color: $color_primary;
+    }
+}
+
+#btn-post-comment {
+    position: relative;
+    color: $color_tertiary;
+    font-weight: 800;
+    svg { 
+        position: absolute;
+        top: 10px;
+        left: -10px;
+
+    }
+    p { 
+         margin: 0;
+    }
+    &:hover {
+        color: $color_primary;
+    }
+}
+
+#btn-close-edit-post {
+    svg { 
+        font-size: large;
+        font-weight: 800;
+    }
+}
+
+#btn-publish-modified-post {
+    position: relative;
+    color: $color_tertiary;
+    font-weight: 800;
+    svg { 
+        position: absolute;
+        top: 10px;
+        left: -11px;
+
+    }
+    p { 
+         margin: 0;
+    }
+    &:hover {
+        color: $color_primary;
+    }
+}

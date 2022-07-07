@@ -1,3 +1,5 @@
+import { FaRegPaperPlane } from 'react-icons/fa';
+
 import { useState } from 'react';
 import axios from 'axios';
 import { useForm } from 'react-hook-form';
@@ -28,22 +30,23 @@ function ModifyPost(props) {
   };
 
   return (
-    <div className="container col-lg-5 py-4">
+    <div className="container">
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="mb-3">
-          <label for="InputPost1" class="form-label">
-            Post :
-          </label>
           <textarea
             {...register('postDescription')}
             className="form-control"
             id="InputPost1"
           />
         </div>
-        <FileUploaderBtn handleFile={handleFile} />
-        <button type="submit" value="Submit" className="btn btn-primary">
-          Publier
-        </button>
+        <div className='container pb-2 border-top d-flex justify-content-evenly'>
+          <FileUploaderBtn handleFile={handleFile} />
+          <button type="submit" value="Submit" className="btn d-flex" id='btn-publish-modified-post'>
+            <FaRegPaperPlane />
+            <p>Publier</p>
+          </button>
+        </div>
+
       </form>
     </div>
   );

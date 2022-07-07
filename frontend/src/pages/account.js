@@ -4,7 +4,7 @@ import axios from "axios";
 
 
 import Footer from '../components/layout/footer';
-import Header from '../components/layout/header';
+import Nav from '../components/layout/nav';
 
 import SignUpFormModify from '../components/forms/user/signUpFormModify';
 
@@ -41,7 +41,7 @@ function AccountProfile() {
 
         return (
             <div className='page__wrapper'>
-                <Header />
+                <Nav />
                 <main className='container-fluid bg-light'>
                     <div className='container py-4'>
                         <div className='card mb-3'>

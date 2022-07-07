@@ -1,3 +1,6 @@
+import { FaRegPaperPlane } from 'react-icons/fa';
+
+
 import { useState } from 'react';
 import axios from 'axios';
 import { useForm } from 'react-hook-form';
@@ -31,8 +34,8 @@ function PostForm() {
   };
 
   return (
-    <div className="container col-lg-5 py-4">
-      <div className="card p-3 ">
+    <div className="container col-lg-4 py-4">
+      <div className="card p-3 border shadow-sm">
         <div className="card-text">
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="mb-3">
@@ -43,10 +46,11 @@ function PostForm() {
                 id="InputPost1"
               />
             </div>
-            <div className="border-top pt-3 d-flex justify-content-between">
+            <div className="border-top d-flex justify-content-evenly">
               <FileUploaderBtn handleFile={handleFile} />
-              <button type="submit" value="Submit" className="btn btn-danger">
-                Publier
+              <button type="submit" value="Submit" className="btn d-flex " id='btn-publish'>
+                <FaRegPaperPlane />
+                <p>Publier</p>
               </button>
             </div>
           </form>

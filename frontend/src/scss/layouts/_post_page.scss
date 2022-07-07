@@ -1,11 +1,29 @@
+#main-post {
+  box-shadow:
+    inset 0px 10px 10px -15px $color_tertiary, 
+    inset 0px -10px 15px -10px $color_tertiary;
+    .card-text{
+      h1 {
+          color: $color_tertiary;
+          font-size: 1.1em;
+          font-weight: 800;
+      }
+      p { 
+          color: $color_tertiary;
+          font-weight: 500;
+      }
+  }
+}
+
+
+
+
 .popup_postEdit {
     width: 400px;
-    background: #979797;
     border-radius: 6px;
     position: absolute;
     top: 0;
     left: 50%;
-    padding: 0 30px 30px;
     transform: translate(-50%, -50%) scale(0.1);
     visibility: hidden;
     transition: transform 0.4s, top 0.4s;
@@ -23,3 +41,4 @@
       height: auto;
     }
 }
+
