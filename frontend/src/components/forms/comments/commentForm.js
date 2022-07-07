@@ -27,7 +27,7 @@ function CommentForm() {
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
             <div className="mb-3">
-                <label for="InputComment1" className="form-label">Commentaire :</label>
+                <label htmlFor="InputComment1" className="form-label">Commentaire :</label>
                 <textarea {...register("commentDescription")} className="form-control" id="InputComment1" />
             </div>
             <button type="submit" value="Submit" className="btn btn-primary">Commenter</button>

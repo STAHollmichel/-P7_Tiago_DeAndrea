@@ -178,3 +178,22 @@
         color: $color_primary;
     }
 }
+
+
+#btn-singup-submit {
+    position: relative;
+    color: $color_tertiary;
+    font-weight: 800;
+    svg { 
+        position: absolute;
+        top: 10px;
+        left: -11px;
+
+    }
+    p { 
+         margin: 0;
+    }
+    &:hover {
+        color: $color_primary;
+    }
+}

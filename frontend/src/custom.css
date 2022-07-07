@@ -218,6 +218,26 @@ ul {
   color: #FD2D01;
 }
 
+#btn-singup-submit {
+  position: relative;
+  color: #4E5166;
+  font-weight: 800;
+}
+
+#btn-singup-submit svg {
+  position: absolute;
+  top: 10px;
+  left: -11px;
+}
+
+#btn-singup-submit p {
+  margin: 0;
+}
+
+#btn-singup-submit:hover {
+  color: #FD2D01;
+}
+
 .nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -255,6 +275,15 @@ ul {
 
 #home_footer a:hover {
   color: #FD2D01;
+}
+
+#signup-form label {
+  color: #4E5166;
+  font-weight: 800;
+}
+
+#signup-card div h1 {
+  color: #4E5166;
 }
 
 #main_login {

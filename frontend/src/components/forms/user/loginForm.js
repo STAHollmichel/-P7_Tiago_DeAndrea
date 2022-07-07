@@ -28,12 +28,12 @@ function LoginForm() {
         <div className='form-signin'>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className='form-floating' >
-                    <label for="floatingInput" className="form-label">Adresse e-mail</label>
+                    <label htmlFor="floatingInput" className="form-label">Adresse e-mail</label>
                     <input {...register('email', { required: true })} type="email" className="form-control" id="floatingInput" placeholder="nom@example.fr"/>
                     {errors.email && "L'e-mail est requis"}
                 </div>
                 <div className='form-floating'>
-                    <label for="floatingPassword" className="form-label">Mot de passe</label>
+                    <label htmlFor="floatingPassword" className="form-label">Mot de passe</label>
                     <input {...register('password', { required: true, minLength: 4 })} type="password" className="form-control bg-light mb-4" id="floatingPassword" placeholder="Mot de passe"/>
                     {errors.password && "le mot de passe est requis"}
                 </div>
