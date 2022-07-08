@@ -2,7 +2,9 @@
   box-shadow:
     inset 0px 10px 10px -15px $color_tertiary, 
     inset 0px -10px 15px -10px $color_tertiary;
-    .card-text{
+
+    .card__body {
+
       h1 {
           color: $color_tertiary;
           font-size: 1.1em;
@@ -42,3 +44,14 @@
     }
 }
 
+#post-user-icon {
+
+  position: relative;
+  
+  svg {
+      color: $color_tertiary;
+      position: absolute;
+      top: 10px;
+      left: -10px;
+  }
+}

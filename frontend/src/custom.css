@@ -133,6 +133,26 @@ ul {
   color: #4E5166;
 }
 
+#btn-post-comment {
+  position: relative;
+  color: #4E5166;
+  font-weight: 800;
+}
+
+#btn-post-comment svg {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+#btn-post-comment p {
+  margin: 0;
+}
+
+#btn-post-comment:hover {
+  color: #FD2D01;
+}
+
 #btn-post-edit {
   position: relative;
   color: #4E5166;
@@ -142,7 +162,7 @@ ul {
 #btn-post-edit svg {
   position: absolute;
   top: 10px;
-  left: -15px;
+  left: 10px;
 }
 
 #btn-post-edit p {
@@ -162,7 +182,7 @@ ul {
 #btn-post-delete svg {
   position: absolute;
   top: 10px;
-  left: -15px;
+  left: 10px;
 }
 
 #btn-post-delete p {
@@ -170,26 +190,6 @@ ul {
 }
 
 #btn-post-delete:hover {
-  color: #FD2D01;
-}
-
-#btn-post-comment {
-  position: relative;
-  color: #4E5166;
-  font-weight: 800;
-}
-
-#btn-post-comment svg {
-  position: absolute;
-  top: 10px;
-  left: -10px;
-}
-
-#btn-post-comment p {
-  margin: 0;
-}
-
-#btn-post-comment:hover {
   color: #FD2D01;
 }
 
@@ -235,6 +235,28 @@ ul {
 }
 
 #btn-singup-submit:hover {
+  color: #FD2D01;
+}
+
+#btn-comment-delete {
+  position: relative;
+  color: #4E5166;
+  font-weight: 800;
+}
+
+#btn-comment-delete svg {
+  font-size: 0.9em;
+  position: absolute;
+  top: 9px;
+  left: 13px;
+}
+
+#btn-comment-delete p {
+  font-size: 0.9em;
+  margin: 0;
+}
+
+#btn-comment-delete:hover {
   color: #FD2D01;
 }
 
@@ -372,13 +394,13 @@ ul {
           box-shadow: inset 0px 10px 10px -15px #4E5166, inset 0px -10px 15px -10px #4E5166;
 }
 
-#main-post .card-text h1 {
+#main-post .card__body h1 {
   color: #4E5166;
   font-size: 1.1em;
   font-weight: 800;
 }
 
-#main-post .card-text p {
+#main-post .card__body p {
   color: #4E5166;
   font-weight: 500;
 }
@@ -410,18 +432,29 @@ ul {
   height: auto;
 }
 
+#post-user-icon {
+  position: relative;
+}
+
+#post-user-icon svg {
+  color: #4E5166;
+  position: absolute;
+  top: 10px;
+  left: -10px;
+}
+
 #main-home {
   -webkit-box-shadow: inset 0px 10px 10px -15px #4E5166, inset 0px -10px 15px -10px #4E5166;
           box-shadow: inset 0px 10px 10px -15px #4E5166, inset 0px -10px 15px -10px #4E5166;
 }
 
-#main-home .card-text h1 {
+#main-home .card__body h1 {
   color: #4E5166;
   font-size: 1.1em;
   font-weight: 800;
 }
 
-#main-home .card-text p {
+#main-home .card__body p {
   color: #4E5166;
   font-weight: 500;
 }
@@ -430,11 +463,37 @@ ul {
   font-size: 0.7em;
 }
 
-#post-user-name {
+#wall-post-user-name {
   position: relative;
 }
 
-#post-user-name svg {
+#wall-post-user-name svg {
+  color: #4E5166;
+  position: absolute;
+  top: 10px;
+  left: -10px;
+}
+
+#comment-card h2 {
+  color: #4E5166;
+  font-size: 1em;
+  font-weight: 600;
+}
+
+#comment-card p {
+  color: #4E5166;
+  font-weight: 500;
+}
+
+.card {
+  border: 0px;
+}
+
+#comment-user-icon {
+  position: relative;
+}
+
+#comment-user-icon svg {
   color: #4E5166;
   position: absolute;
   top: 10px;

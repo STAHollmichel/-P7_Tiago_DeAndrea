@@ -54,7 +54,7 @@
     }
 }
 
-
+// Post Buttons 
 
 #btn-checkout-post{
     position: relative;
@@ -99,6 +99,24 @@
     }
 }
 
+#btn-post-comment {
+    position: relative;
+    color: $color_tertiary;
+    font-weight: 800;
+    svg { 
+        position: absolute;
+        top: 10px;
+        left: 10px;
+
+    }
+    p { 
+         margin: 0;
+    }
+    &:hover {
+        color: $color_primary;
+    }
+}
+
 
 #btn-post-edit {
     position: relative;
@@ -107,7 +125,7 @@
     svg { 
         position: absolute;
         top: 10px;
-        left: -15px;
+        left: 10px;
 
     }
     p { 
@@ -125,8 +143,7 @@
     svg { 
         position: absolute;
         top: 10px;
-        left: -15px;
-
+        left: 10px;
     }
     p { 
          margin: 0;
@@ -136,23 +153,6 @@
     }
 }
 
-#btn-post-comment {
-    position: relative;
-    color: $color_tertiary;
-    font-weight: 800;
-    svg { 
-        position: absolute;
-        top: 10px;
-        left: -10px;
-
-    }
-    p { 
-         margin: 0;
-    }
-    &:hover {
-        color: $color_primary;
-    }
-}
 
 #btn-close-edit-post {
     svg { 
@@ -192,6 +192,25 @@
     }
     p { 
          margin: 0;
+    }
+    &:hover {
+        color: $color_primary;
+    }
+}
+
+#btn-comment-delete {
+    position: relative;
+    color: $color_tertiary;
+    font-weight: 800;
+    svg { 
+        font-size: 0.9em;
+        position: absolute;
+        top: 9px;
+        left: 13px;
+    }
+    p { 
+        font-size: 0.9em;
+        margin: 0;
     }
     &:hover {
         color: $color_primary;

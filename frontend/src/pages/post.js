@@ -7,7 +7,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import Nav from '../components/layout/nav';
 import Footer from '../components/layout/footer';
 import PostFormModify from '../components/forms/posts/postFormModify';
-import CommentDisplay from './comment';
+import CommentDisplay from '../components/layout/comment';
 
 
 
@@ -58,47 +58,47 @@ const SinglePost = () => {
         <Nav />
         <main className="container-fluid bg-light" id="main-post">
           <div className="container pt-3 col-lg-4">
-            <section className="card mb-3 bg-white border shadow-sm">
-              <article className='card-body text-center'>
+            <section className="card mb-4 border shadow-sm">
+              <article className='card__body p-3'>
                 <div className='container border-bottom d-flex justify-content-between'>
-                  <div className='d-flex' id='post-user-name'>
+                  <div className='d-flex' id='post-user-icon'>
                     <FaUserAlt />
-                    {/* <h1 className='pt-2 ps-3'>{post.User.firstName} {post.User.lastName}</h1> */}
+                    <h1 className='pt-2 ps-3'>{post.User.firstName} {post.User.lastName}</h1>
                   </div>
                   <p className='pt-2 pe-3 text-muted' id='post-timestamp'>{post.createdAt}</p>
                 </div>
-                <div className='border-bottom'>
+                <div>
                   <p className='p-3'>{post.postDescription}</p>
                 </div>
               </article>
               <picture>
-                <img src={post.postPhoto} className="card-img-fluid" alt="Post" />
+                <img src={post.postPhoto} className="card-img-fluid border-top border-bottom" alt="Post" />
               </picture>
-              <div className="card-body text-center ">
+              <div className="card-body">
                 <div className='border-top d-flex justify-content-between'>
                   <button onClick={commentPost} className="d-flex btn m-2" id='btn-post-comment'>
                     <FaRegCommentDots />
-                    <p className='ps-1'>Commenter</p>
+                    <p className='ps-4'>Commenter</p>
                   </button>
                   {user && (user.admin || user.id === post.userId) ? (
                     <>
                       <div className='d-flex'>
                         <button onClick={openPopupPostEdit} className="btn m-2 d-flex" id='btn-post-edit'>
                           <FaRegEdit />
-                          <p>Editer</p>
+                          <p className='ps-4'>Editer</p>
                         </button>
                         <button onClick={deletePost} className="btn m-2 d-flex" id='btn-post-delete'>
                           <FaTrashAlt />
-                          <p>Effacer</p>
+                          <p className='ps-4'>Effacer</p>
                         </button>
                       </div>
                     </>
                   ) : null}
                 </div>
               </div>
+              <CommentDisplay postId={post.id} />
             </section>
           </div>
-          <CommentDisplay postId={post.id} />
           <div className={`popup_postEdit ${togglePopup ? 'open-popup_postEdit' : ''}`}
             id="popup">
                 <div className='card border shadow'>

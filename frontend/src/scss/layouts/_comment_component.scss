@@ -1,0 +1,27 @@
+#comment-card {
+    h2 {
+        color: $color_tertiary;
+        font-size: 1em;
+        font-weight: 600;
+    }
+    p { 
+        color: $color_tertiary;
+        font-weight: 500;
+    }
+}
+
+.card {
+    border: 0px;
+}
+
+#comment-user-icon {
+
+    position: relative;
+    
+    svg {
+        color: $color_tertiary;
+        position: absolute;
+        top: 10px;
+        left: -10px;
+    }
+}
