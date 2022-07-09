@@ -1,8 +1,26 @@
-.btn-secondary {
+
+#btn-login {
     color: #fff;
-    background-color: #FFD7D7;
-    border-color: #FFD7D7;
+    background-color: $color_primary;
+
+    &:hover {
+        background-color: $color_secondary;
+        color: $color_tertiary;
+    }
+    
 }
+
+#btn-signup {
+    color: #fff;
+    background-color: $color_tertiary;
+    
+    &:hover {
+        background-color: #fff;
+        color: $color_tertiary;
+    }
+
+}
+
 
 #btn-publish {
     position: relative;
@@ -56,14 +74,14 @@
 
 // Post Buttons 
 
-#btn-checkout-post{
+#btn-post-checkout{
     position: relative;
     color: $color_tertiary;
     font-weight: 800;
     svg { 
         position: absolute;
-        top: 20px;
-        left: -12px;
+        top: 21px;
+        left: 0px;
 
     }
     p { 
@@ -81,8 +99,8 @@
     svg {
         stroke-width: 2.5;
         position: absolute;
-        top: 20px;
-        left: -10px;
+        top: 19px;
+        left: 0px;
 
     }
     p { 
@@ -185,6 +203,7 @@
     color: $color_tertiary;
     font-weight: 800;
     svg { 
+        color: green;
         position: absolute;
         top: 10px;
         left: -11px;
@@ -194,9 +213,30 @@
          margin: 0;
     }
     &:hover {
+        color: green;
+    }
+}
+
+
+#btn-comment-publish {
+    position: relative;
+    color: $color_tertiary;
+    font-weight: 800;
+    svg { 
+        font-size: 0.9em;
+        position: absolute;
+        top: 9px;
+        left: 13px;
+    }
+    p { 
+        font-size: 0.9em;
+        margin: 0;
+    }
+    &:hover {
         color: $color_primary;
     }
 }
+
 
 #btn-comment-delete {
     position: relative;
@@ -215,4 +255,41 @@
     &:hover {
         color: $color_primary;
     }
+}
+
+#btn-account-edit {
+    position: relative;
+    color: $color_tertiary;
+    font-weight: 800;
+    svg { 
+        position: absolute;
+        top: 10px;
+        left: 10px;
+
+    }
+    p { 
+         margin: 0;
+    }
+    &:hover {
+        color: $color_primary;
+    }
+}
+
+#btn-account-delete {
+    position: relative;
+    color: red;
+    font-weight: 800;
+    svg { 
+        position: absolute;
+        top: 10px;
+        left: 10px;
+
+    }
+    p { 
+         margin: 0;
+    }
+    &:hover {
+        color: $color_secondary;
+    }
+
 }

@@ -1,10 +1,35 @@
 #home_footer {
+
     background-color: $color_tertiary;
+
+    .nav {
+        background: none;
+    }
+
+    p {
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+    }
+}
+
+#social-icons {
+    a {
+        color: #fff;
+        text-decoration: none;
+        
+        &:hover {
+         color: $color_primary;
+        }
+    }
+}
+
+#footer-links {
     a {
         color: $color_secondary;
         text-decoration: none;
-        &:hover { color: $color_primary;
-         
+
+        &:hover { 
+        color: $color_primary;
         }
     }
 }

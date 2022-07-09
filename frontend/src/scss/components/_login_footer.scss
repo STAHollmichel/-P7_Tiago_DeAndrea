@@ -1,9 +1,17 @@
 #login_footer {
+
   background-color: #fff;
+  
+  .nav  {
+    background: none;
+  }
+
   a {
     color: $color_tertiary;
     text-decoration: none;
-    &:hover { color: $color_primary;
+
+    &:hover { 
+      color: $color_primary;
     }
   }
 }

@@ -3,8 +3,8 @@ import { FaFacebook, FaTwitter, FaGoogle, FaInstagram, FaLinkedin } from 'react-
 
 function Footer() {
     return (
-        <footer className='container-fluid bg-tertiary text-center' id='home_footer'>
-             <section className=" text-center fs-3 pt-4 mb-4 bg-dark">
+        <footer className='container-fluid text-center' id='home_footer'>
+             <section className='text-center fs-3 py-4 bg-dark' id='social-icons'>
                     <a className=" m-2" href="#!" role="button">
                         <FaFacebook />
                     </a>
@@ -22,17 +22,16 @@ function Footer() {
                     </a>
                 </section>
                 <section className='text-center'>
-                    <ul className='d-flex flex-sm-row'>
-                        <li className='px-3'><a href="#">Mentions légales</a></li>
-                        <li className='px-3 li-bdl-cs'><a href="#">Données personnelles</a></li>
-                        <li className='px-3 li-bdl-cs'><a href="#">Plan du site</a></li>
-                        <li className='px-3 li-bdl-cs'><a href="#">Contact</a></li>
-                        <li className='px-3 li-bdl-cs'><a href="#">Crédits</a></li>
-                        <li className='px-3 li-bdl-cs'><a href="#">Accessibilité</a></li>
+                    <ul className='nav justify-content-center py-3' id='footer-links'>
+                        <li className='nav-item ps-3'><a href="#">Mentions légales</a></li>
+                        <li className='nav-item ps-3'><a href="#">Données personnelles</a></li>
+                        <li className='nav-item ps-3'><a href="#">Plan du site</a></li>
+                        <li className='nav-item ps-3'><a href="#">Contact</a></li>
+                        <li className='nav-item ps-3'><a href="#">Crédits</a></li>
+                        <li className='nav-item ps-3'><a href="#">Accessibilité</a></li>
                     </ul>
-                
                     <div className='text-center'>
-                        <p className='text-light'>© Groupomania 2022</p>
+                        <p className='text-light py-3'>© Groupomania 2022</p>
                     </div>
                 </section>
         </footer>
