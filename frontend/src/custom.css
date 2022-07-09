@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400&display=swap");
 html, body {
   height: 100%;
@@ -13,12 +14,22 @@ ul {
   list-style-type: none;
 }
 
-.li-bdl-cs {
-  border-left: solid 1px #FFD7D7;
+::-webkit-input-placeholder {
+  -webkit-padding-start: 10px;
+          padding-inline-start: 10px;
 }
 
-.li-bdl-ct {
-  border-left: solid 1px #4E5166;
+:-ms-input-placeholder {
+  padding-inline-start: 10px;
+}
+
+::-ms-input-placeholder {
+  padding-inline-start: 10px;
+}
+
+::placeholder {
+  -webkit-padding-start: 10px;
+          padding-inline-start: 10px;
 }
 
 .container-fluid {
@@ -26,10 +37,32 @@ ul {
   padding-right: 0rem;
 }
 
-.btn-secondary {
+p {
+  margin-bottom: 0;
+}
+
+a:-webkit-any-link {
+  text-decoration: none;
+}
+
+#btn-login {
   color: #fff;
+  background-color: #FD2D01;
+}
+
+#btn-login:hover {
   background-color: #FFD7D7;
-  border-color: #FFD7D7;
+  color: #4E5166;
+}
+
+#btn-signup {
+  color: #fff;
+  background-color: #4E5166;
+}
+
+#btn-signup:hover {
+  background-color: #fff;
+  color: #4E5166;
 }
 
 #btn-publish {
@@ -84,23 +117,23 @@ ul {
   stroke-width: 3;
 }
 
-#btn-checkout-post {
+#btn-post-checkout {
   position: relative;
   color: #4E5166;
   font-weight: 800;
 }
 
-#btn-checkout-post svg {
+#btn-post-checkout svg {
   position: absolute;
-  top: 20px;
-  left: -12px;
+  top: 21px;
+  left: 0px;
 }
 
-#btn-checkout-post p {
+#btn-post-checkout p {
   margin: 0;
 }
 
-#btn-checkout-post:hover {
+#btn-post-checkout:hover {
   color: #FD2D01;
 }
 
@@ -113,8 +146,8 @@ ul {
 #btn-like svg {
   stroke-width: 2.5;
   position: absolute;
-  top: 20px;
-  left: -10px;
+  top: 19px;
+  left: 0px;
 }
 
 #btn-like p {
@@ -225,6 +258,7 @@ ul {
 }
 
 #btn-singup-submit svg {
+  color: green;
   position: absolute;
   top: 10px;
   left: -11px;
@@ -235,6 +269,28 @@ ul {
 }
 
 #btn-singup-submit:hover {
+  color: green;
+}
+
+#btn-comment-publish {
+  position: relative;
+  color: #4E5166;
+  font-weight: 800;
+}
+
+#btn-comment-publish svg {
+  font-size: 0.9em;
+  position: absolute;
+  top: 9px;
+  left: 13px;
+}
+
+#btn-comment-publish p {
+  font-size: 0.9em;
+  margin: 0;
+}
+
+#btn-comment-publish:hover {
   color: #FD2D01;
 }
 
@@ -260,6 +316,46 @@ ul {
   color: #FD2D01;
 }
 
+#btn-account-edit {
+  position: relative;
+  color: #4E5166;
+  font-weight: 800;
+}
+
+#btn-account-edit svg {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+#btn-account-edit p {
+  margin: 0;
+}
+
+#btn-account-edit:hover {
+  color: #FD2D01;
+}
+
+#btn-account-delete {
+  position: relative;
+  color: red;
+  font-weight: 800;
+}
+
+#btn-account-delete svg {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+#btn-account-delete p {
+  margin: 0;
+}
+
+#btn-account-delete:hover {
+  color: #FFD7D7;
+}
+
 .nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -277,6 +373,10 @@ ul {
   background-color: #fff;
 }
 
+#login_footer .nav {
+  background: none;
+}
+
 #login_footer a {
   color: #4E5166;
   text-decoration: none;
@@ -290,22 +390,72 @@ ul {
   background-color: #4E5166;
 }
 
-#home_footer a {
+#home_footer .nav {
+  background: none;
+}
+
+#home_footer p {
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+}
+
+#social-icons a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#social-icons a:hover {
+  color: #FD2D01;
+}
+
+#footer-links a {
   color: #FFD7D7;
   text-decoration: none;
 }
 
-#home_footer a:hover {
+#footer-links a:hover {
   color: #FD2D01;
 }
 
-#signup-form label {
+.signup-form label {
   color: #4E5166;
   font-weight: 800;
 }
 
 #signup-card div h1 {
   color: #4E5166;
+}
+
+.form-required {
+  margin-bottom: 0rem;
+}
+
+.red-required {
+  color: red;
+}
+
+.required-info p {
+  font-style: italic;
+  font-size: 0.8em;
+  font-weight: 600;
+}
+
+::-webkit-input-placeholder {
+  -webkit-padding-start: 10px;
+          padding-inline-start: 10px;
+}
+
+:-ms-input-placeholder {
+  padding-inline-start: 10px;
+}
+
+::-ms-input-placeholder {
+  padding-inline-start: 10px;
+}
+
+::placeholder {
+  -webkit-padding-start: 10px;
+          padding-inline-start: 10px;
 }
 
 #main_login {
@@ -349,9 +499,18 @@ ul {
 }
 
 .form-signin input[type="password"] {
-  margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+}
+
+.form-signin p {
+  margin-bottom: 0;
+  color: #bf1650;
+}
+
+.form-signin p::before {
+  display: inline;
+  content: "⚠ ";
 }
 
 #login_reg_seperator {
@@ -387,6 +546,75 @@ ul {
 
 #main_signup {
   text-align: center;
+}
+
+#main-account {
+  -webkit-box-shadow: inset 0px 10px 10px -15px #4E5166, inset 0px -10px 15px -10px #4E5166;
+          box-shadow: inset 0px 10px 10px -15px #4E5166, inset 0px -10px 15px -10px #4E5166;
+}
+
+#main-account .card__body h1 {
+  color: #4E5166;
+  font-size: 1.8em;
+  font-weight: 500;
+}
+
+#main-account .card__body h2 {
+  color: #4E5166;
+  font-size: 1em;
+  font-weight: 600;
+}
+
+#account-cake-icon {
+  position: relative;
+}
+
+#account-cake-icon svg {
+  color: #4E5166;
+  position: absolute;
+  top: 3px;
+  left: 10px;
+}
+
+#account-cake-icon p {
+  color: #4E5166;
+  font-weight: 800;
+}
+
+#account-briefcase-icon {
+  position: relative;
+}
+
+#account-briefcase-icon svg {
+  color: #4E5166;
+  position: absolute;
+  top: 3px;
+  left: 10px;
+}
+
+#account-briefcase-icon p {
+  color: #4E5166;
+  font-weight: 800;
+}
+
+#account-bio-icon {
+  position: relative;
+}
+
+#account-bio-icon svg {
+  color: #4E5166;
+  position: absolute;
+  top: 2px;
+  left: 10px;
+}
+
+#account-bio-icon p {
+  font-weight: 800;
+}
+
+#account-bio-icon h2 {
+  -webkit-padding-start: 30px;
+          padding-inline-start: 30px;
 }
 
 #main-post {

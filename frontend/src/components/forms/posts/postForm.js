@@ -42,7 +42,7 @@ function PostForm() {
               <textarea
                 {...register('postDescription')}
                 placeholder="Que voulais-vous dire?"
-                class="form-control bg-light pb-0 rounded-pill"
+                class="form-control bg-light ps-4 rounded-pill"
                 id="InputPost1"
               />
             </div>

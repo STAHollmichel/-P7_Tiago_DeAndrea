@@ -6,8 +6,10 @@ import { useNavigate, useParams } from 'react-router-dom';
 
 import Nav from '../components/layout/nav';
 import Footer from '../components/layout/footer';
+
 import PostFormModify from '../components/forms/posts/postFormModify';
 import CommentDisplay from '../components/layout/comment';
+import CommentForm from '../components/forms/comments/commentForm';
 
 
 
@@ -65,7 +67,7 @@ const SinglePost = () => {
                     <FaUserAlt />
                     <h1 className='pt-2 ps-3'>{post.User.firstName} {post.User.lastName}</h1>
                   </div>
-                  <p className='pt-2 pe-3 text-muted' id='post-timestamp'>{post.createdAt}</p>
+                  {/* <p className='pt-2 pe-3 text-muted' id='post-timestamp'>{post.createdAt}</p> */}
                 </div>
                 <div>
                   <p className='p-3'>{post.postDescription}</p>
@@ -96,6 +98,7 @@ const SinglePost = () => {
                   ) : null}
                 </div>
               </div>
+              <CommentForm postId={post.id} />
               <CommentDisplay postId={post.id} />
             </section>
           </div>

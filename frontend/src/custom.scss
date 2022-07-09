@@ -20,10 +20,11 @@ $theme-colors: (
 @import './scss/components/_login_footer.scss';
 @import './scss/components/_footer.scss';
 @import './scss/components/_signup_form.scss';
-
+@import './scss/components/_comment_form.scss';
 
 @import './scss/layouts/_login_page.scss';
 @import './scss/layouts/_signup_page.scss';
+@import './scss/layouts/_account_page.scss';
 @import './scss/layouts/_post_page.scss';
 @import './scss/layouts/wall_page';
 @import './scss/layouts/_comment_component';
