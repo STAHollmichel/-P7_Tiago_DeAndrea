@@ -4,7 +4,7 @@ const { Comment, Post } = db.sequelize.models;
 
 
 exports.createComment = (req, res, next) => {
-    Comment.create({ ...req.body, userId: req.body.userId, postId: req.body.postId }) 
+    Comment.create({ ...req.body, userId: req.body.userId, postId: req.body.postId, include: User }) 
     .then(() => res.status(201).json({ message: 'Commentaire ajouté !'}))
     .catch(error => res.status(400).json({ error }));
 };
