@@ -18,15 +18,19 @@ ul {
     list-style-type: none;
 }
 
-.li-bdl-cs {
-    border-left: solid 1px $color_secondary;
-}
-
- .li-bdl-ct{
-  border-left: solid 1px $color_tertiary;
+::placeholder {
+  padding-inline-start: 10px;
 }
 
 .container-fluid{ 
   padding-left: 0rem;
   padding-right: 0rem; 
+}
+
+p {
+  margin-bottom: 0;
+}
+
+a:-webkit-any-link {
+  text-decoration: none;
 }

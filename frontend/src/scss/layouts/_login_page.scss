@@ -35,11 +35,28 @@ background: linear-gradient(0deg, rgba(255,215,215,1) 0%, rgba(255,232,232,1) 5%
         border-bottom-left-radius: 0;
       }
       input[type="password"] {
-        margin-bottom: 10px;
         border-top-left-radius: 0;
         border-top-right-radius: 0;
       }
+
+      p {
+          margin-bottom: 0;
+          color: #bf1650;
+      }
+        
+      p::before {
+        display: inline;
+        content: "⚠ ";
+      }
 }
+
+
+
+
+
+
+
+
 
 #login_reg_seperator {
     display: block;

@@ -37,14 +37,20 @@ function SignUpForm() {
 
   return (
     <div className='container py-4 col-lg-5'>
-      <form onSubmit={handleSubmit(onSubmit)} id='signup-form'>
+      <form onSubmit={handleSubmit(onSubmit)} className='text-start signup-form'>
         <div className='mb-3'>
-          <label htmlFor='InputFirstName' className='form-label'>Prénom: *</label>
+          <label htmlFor='InputFirstName' className='form-label d-flex'>
+            <p className=' form-required'>Prénom</p>
+            <p className='ps-1 form-required red-required'>*</p>
+          </label>
           <input {...register('firstName', { required: true, maxLength: 20, pattern: /^[A-Za-z]+$/i })} type='text' className='form-control bg-light' id='FirstName'/>
           {errors.firstName && "Le prénom est requis"}
         </div>
         <div className='mb-3'>
-          <label htmlFor='InputLastName1' className='form-label'>Nom: *</label>
+          <label htmlFor='InputLastName1' className='form-label d-flex'>
+            <p className=' form-required'>Nom</p>
+            <p className='ps-1 form-required red-required'>*</p>
+          </label>
           <input {...register('lastName', { required: true, maxLength: 20, patttern: /^[A-Za-z]+$/i })} type='text' className='form-control bg-light' id='InputLastName'/>
           {errors.lastName && "Le nom de famille est requis"}
         </div>
@@ -61,19 +67,30 @@ function SignUpForm() {
           <textarea {...register('bio')} className='form-control bg-light' id='InputBio1'/>
         </div>
         <div className='mb-3'>
-          <label htmlFor='InputEmail1' className='form-label'>E-mail: *</label>
+          <label htmlFor='InputEmail1' className='form-label d-flex'>
+            <p className=' form-required'>E-mail</p>
+            <p className='ps-1 form-required red-required'>*</p> 
+          </label>
           <input {...register('email', { required: true })} type='email' className='form-control bg-light' id='InputEmail1'/>
           {errors.email && "L'e-mail est requis"}
         </div>
         <div className='mb-3'>
-          <label htmlFor='InputPassword1' className='form-label'>Password: *</label>
-          <input {...register('password', { required: true, minLength: 4 })} type='Password' className='form-control bg-light' id='InputPassword1'/>
-          {errors.password && "le mot de passe est requis"}
+          <label htmlFor='InputPassword1' className='form-label d-flex'>
+            <p className=' form-required'>Password</p>
+            <p className='ps-1 form-required red-required'>*</p>
+          </label>
+          <input {...register('password', { required: true, minLength: 6 })} type='Password' className='form-control bg-light' id='InputPassword1'/>
+          {errors.password && "Le mot de passe est requis"}
         </div>
+        <div className='d-flex required-info'>
+          <p className='ps-1 form-required red-required'>*</p>
+          <p className='ps-1'>Doit être obligatoirement rempli</p>
+        </div>
+
         <div className='d-flex justify-content-center'>
           <button type='submit' value='Submit' className='btn d-flex' id='btn-singup-submit'>
-            <p>Enregistrer</p>
             <FaCheck />
+            <p>Enregistrer</p>
           </button>
         </div>
         

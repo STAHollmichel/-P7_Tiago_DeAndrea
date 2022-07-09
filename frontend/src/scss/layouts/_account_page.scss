@@ -1,0 +1,76 @@
+#main-account {
+    box-shadow:
+    inset 0px 10px 10px -15px $color_tertiary, 
+    inset 0px -10px 15px -10px $color_tertiary;
+    
+    .card__body {
+
+        h1 {
+            color: $color_tertiary;
+            font-size: 1.8em;
+            font-weight: 500;
+        }
+
+        h2 {
+            color: $color_tertiary;
+            font-size: 1em;
+            font-weight: 600;
+        }
+
+    }
+}
+
+#account-cake-icon {
+
+    position: relative;
+    
+    svg {
+        color: $color_tertiary;
+        position: absolute;
+        top: 3px;
+        left: 10px;
+    }
+
+    p { 
+        color: $color_tertiary;
+        font-weight: 800;
+    }
+}
+
+#account-briefcase-icon {
+
+    position: relative;
+    
+    svg {
+        color: $color_tertiary;
+        position: absolute;
+        top: 3px;
+        left: 10px;
+    }
+
+    p { 
+        color: $color_tertiary;
+        font-weight: 800;
+    }
+}
+
+#account-bio-icon {
+
+    position: relative;
+    
+    svg {
+        color: $color_tertiary;
+        position: absolute;
+        top: 2px;
+        left: 10px;
+    }
+
+    p { 
+        font-weight: 800;
+    }
+
+    h2 {
+        padding-inline-start: 30px;
+    }
+}
+

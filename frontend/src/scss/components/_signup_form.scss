@@ -1,4 +1,4 @@
-#signup-form {
+.signup-form {
     label {
         color: $color_tertiary;
         font-weight: 800;
@@ -12,4 +12,20 @@
         }
     }
    
+}
+
+.form-required {
+    margin-bottom: 0rem;
+}
+
+.red-required {
+    color: red;
+}
+
+.required-info {
+    p {
+        font-style: italic;
+        font-size: 0.8em;
+        font-weight: 600;
+    }
 }
