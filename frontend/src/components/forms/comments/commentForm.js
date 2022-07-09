@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useForm } from "react-hook-form";
+import { FaRegPaperPlane } from "react-icons/fa";
 import { useNavigate, useParams } from "react-router-dom";
 
 
@@ -25,13 +26,22 @@ function CommentForm() {
 
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)}>
-            <div className="mb-3">
-                <label htmlFor="InputComment1" className="form-label">Commentaire :</label>
-                <textarea {...register("commentDescription")} className="form-control" id="InputComment1" />
+        <div className='container'>
+            <div className='card'>
+                <form onSubmit={handleSubmit(onSubmit)} className='card-body'>
+                <div>
+                    <textarea {...register("commentDescription")} placeholder="Écrivez un commentaire..." rows='auto'
+                    className="form-control bg-light pb-0 rounded-pill" id="InputComment1" />
+                </div>
+                <div className='d-flex justify-content-end'>
+                    <button type="submit" value="Submit" className="btn d-flex" id='btn-comment-publish'>
+                        <FaRegPaperPlane />
+                        <p className='ps-4'>Publier</p>
+                    </button>
+                </div>
+                </form>
             </div>
-            <button type="submit" value="Submit" className="btn btn-primary">Commenter</button>
-        </form>
+        </div>
         );
     }
 

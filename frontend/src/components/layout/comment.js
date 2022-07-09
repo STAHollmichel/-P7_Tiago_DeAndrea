@@ -44,7 +44,7 @@ function CommentDisplay(props) {
                   <p className='card-text ps-3 p-2 text-black bg-light rounded-pill'>{comment.commentDescription}</p>
                 </div>
                 <div className='d-flex justify-content-end'>
-                  <button onClick={() => deleteComment(comment.id)} className='btn m-2 pe-3 d-flex' id='btn-comment-delete'>
+                  <button onClick={() => deleteComment(comment.id)} className='btn pe-3 d-flex' id='btn-comment-delete'>
                     <FaTrashAlt />
                     <p className='ps-4'>Effacer</p>
                   </button>
