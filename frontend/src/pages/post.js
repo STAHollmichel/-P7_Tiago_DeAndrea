@@ -1,9 +1,10 @@
 import { FaEllipsisH, FaRegCommentDots, FaRegEdit, FaRegWindowClose, FaTrashAlt, FaUserAlt } from 'react-icons/fa';
 import "bootstrap/js/src/collapse.js";
+import PulseLoader from "react-spinners/PulseLoader";
 
 import axios from 'axios';
 import { useState, useEffect } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams, NavLink } from 'react-router-dom';
 
 import Nav from '../components/layout/nav';
 import Footer from '../components/layout/footer';
@@ -59,9 +60,8 @@ const SinglePost = () => {
       });
   };
 
-  // const commentPost = () => {
-  //   navigate('/comment_create/' + post.id);
-  // };
+ 
+  
 
   if (post) {
     return (
@@ -73,10 +73,11 @@ const SinglePost = () => {
               <article className='card__body p-3'>
                 <div className='container border-bottom d-flex justify-content-between'>
                   <div className='d-flex' id='post-user-icon'>
-                    <FaUserAlt />
-                    <h1 className='pt-2 ps-3'>{post.User.firstName} {post.User.lastName}</h1>
+                    <NavLink to='/account'>
+                      <FaUserAlt />
+                      <h1 className='pt-2 ps-3'>{post.User.firstName} {post.User.lastName}</h1>
+                    </NavLink>
                   </div>
-                  {/* <p className='pt-2 pe-3 text-muted' id='post-timestamp'>{post.createdAt}</p> */}
                 </div>
                 <div>
                   <p className='p-3'>{post.postDescription}</p>
@@ -97,18 +98,21 @@ const SinglePost = () => {
                   </button>
                   {user && (user.admin || user.id === post.userId) ? (
                     <>
-                      <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-bs-expanded="false" aria-bs-controls="collapseExample">
+                      <div className='navbar navbar-expand-md'>
+                        <button class="navbar-toggler collapsed btn-collapsed-nav" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-post-options"
+                      aria-controls="collapseExample" aria-expanded="false" aria-label="Toggle navigation" id="btn-post-options-collapse">
                         <FaEllipsisH />
-                      </button>
-                      <div className='d-flex collapse' id="collapseExample">
-                        <button onClick={openPopupPostEdit} className="btn m-2 d-flex" id='btn-post-edit'>
-                          <FaRegEdit />
-                          <p className='ps-4'>Editer</p>
                         </button>
-                        <button onClick={deletePost} className="btn m-2 d-flex" id='btn-post-delete'>
-                          <FaTrashAlt />
-                          <p className='ps-4'>Effacer</p>
-                        </button>
+                        <div className='navbar-collapse collapse' id="collapse-post-options">
+                          <button onClick={openPopupPostEdit} className="btn m-2 d-flex" id='btn-post-edit'>
+                            <FaRegEdit />
+                            <p className='ps-4'>Editer</p>
+                          </button>
+                          <button onClick={deletePost} className="btn m-2 d-flex" id='btn-post-delete'>
+                            <FaTrashAlt />
+                            <p className='ps-4'>Effacer</p>
+                          </button>
+                        </div>
                       </div>
                     </>
                   ) : null}
@@ -142,8 +146,11 @@ const SinglePost = () => {
         <Nav/>
         <main>
           <div className="container mt-3">
-            <div className="card mb-3">
-              <h1>Post indisponible!</h1>
+            <div className="p-3 d-flex justify-content-center">
+              < PulseLoader
+              color="#FFD7D7"
+              speedMultiplier={0.7}
+              />
             </div>
           </div>
         </main>
