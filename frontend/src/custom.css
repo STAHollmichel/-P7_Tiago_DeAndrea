@@ -379,6 +379,14 @@ a:-webkit-any-link {
   color: #FFD7D7;
 }
 
+#btn-post-options-collapse {
+  color: #4E5166;
+}
+
+#btn-nav-collapse {
+  color: #4E5166;
+}
+
 .nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -642,6 +650,7 @@ a:-webkit-any-link {
 }
 
 #main-post {
+  min-height: 70vh;
   -webkit-box-shadow: inset 0px 10px 10px -15px #4E5166, inset 0px -10px 15px -10px #4E5166;
           box-shadow: inset 0px 10px 10px -15px #4E5166, inset 0px -10px 15px -10px #4E5166;
 }

@@ -37,17 +37,14 @@ function Nav() {
                 <img src={logoIcon} onClick={navigate} alt='Groupomania navLogo'/>
               </NavLink>
           </div>
-
-
-
           <button className="navbar-toggler collapsed btn-collapsed-nav" type="button" data-bs-toggle="collapse" 
-          data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation" id='btn-nav-collapse'>
             <FaBars />
           </button>
           <div className="navbar-collapse collapse" id="navbarText">
             <div className="navbar-nav me-auto mb-2 mb-lg-0">
             </div>
-            <div className="navbar-disconnect me-lg-2 pe-lg-3 d-flex justify-content-end">
+            <div className="navbar-disconnect me-2 pe-lg-3 d-flex justify-content-end">
               <NavLink to="/" className={'nav-item'} >
                 <button className="btn">
                   <FaHome />
