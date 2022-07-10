@@ -70,16 +70,20 @@ function AccountProfile() {
                                     </div>
                                     <p className='tex-start'>{user.bio}</p>
                                 </div>
-                                <div className='d-flex justify-content-end'>
-                                    <button onClick={toggleModify} className='btn m-2 d-flex' id='btn-account-edit'>
-                                        <FaUserEdit />
-                                        <p className='ps-4'>Editer le profile</p>
-                                    </button>
-                                    <button onClik={deleteAccount} className='btn m-2 d-flex' id='btn-account-delete'>
-                                        <FaUserSlash/>
-                                        <p className='ps-4'>Effacer le profile</p>
-                                    </button>
-                                </div>
+                                {user && (user.admin || user.id ) ? (
+                                    <>
+                                        <div className='d-flex justify-content-end'>
+                                            <button onClick={toggleModify} className='btn m-2 d-flex' id='btn-account-edit'>
+                                                <FaUserEdit />
+                                                <p className='ps-4'>Editer le profile</p>
+                                            </button>
+                                            <button onClick={deleteAccount} className='btn m-2 d-flex' id='btn-account-delete'>
+                                                <FaUserSlash/>
+                                                <p className='ps-4'>Effacer le profile</p>
+                                            </button>
+                                        </div>
+                                    </>
+                                    ) : null}
                                 <SignUpFormModify modify={modify} />
                             </article>
                         </section>
