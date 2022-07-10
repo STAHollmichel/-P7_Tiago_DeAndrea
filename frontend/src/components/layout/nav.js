@@ -6,6 +6,7 @@ import { FiLogOut  } from "react-icons/fi";
 
 import { NavLink, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import "bootstrap/js/src/collapse.js";
 
 
 function Nav() {
@@ -33,7 +34,7 @@ function Nav() {
         <div className="container-fluid">
           <div className="navbar-brand ps-3" >
               <NavLink to="/">
-              <img src={logoIcon} onClick={navigate} alt='Groupomania navLogo'/>
+                <img src={logoIcon} onClick={navigate} alt='Groupomania navLogo'/>
               </NavLink>
           </div>
 
@@ -43,35 +44,21 @@ function Nav() {
           data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <FaBars />
           </button>
-          <div className="collapse navbar-collapse" id="navbarText">
+          <div className="navbar-collapse collapse" id="navbarText">
             <div className="navbar-nav me-auto mb-2 mb-lg-0">
             </div>
-{/* 
-     <button class="navbar-toggler collapsed btn-collapsed-nav p-3" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav">
-        <i class="fas fa-bars"></i>
-      </button>
-      <div class="navbar-collapse collapse" id="main_nav">
-        <form class="form-inline col-lg p-3" data-np-checked="1">
-          <input type="Text" class="form-control" placeholder="Recherche de Produits" aria-label="Search" data-np-checked="1">
-        </form>
-        <div class="navbar-item p-3">
-          <button type="button" class="btn btn-outline-primary me-2">Connexion</button>
-          <button type="button" class="btn btn-outline-secondary me-2"><i class="fas fa-heart"></i></button>
-          <button  type="button" class="btn btn-outline-tertiary" onclick="window.location.href='./cart.html';"><i class="fas fa-shopping-basket"></i></button>
-        </div> */}
-
-            <div className="navbar-disconnect me-2 pe-3">
-              <NavLink to="/">
+            <div className="navbar-disconnect me-lg-2 pe-lg-3 d-flex justify-content-end">
+              <NavLink to="/" className={'nav-item'} >
                 <button className="btn">
                   <FaHome />
                 </button>
               </NavLink>
-              <NavLink to="/account">
+              <NavLink to="/account" className={'nav-item'} >
                 <button className="btn">
                   <FaUserAlt />
                 </button>
               </NavLink>
-              <button className="btn" onClick={logOut} id='btn-logout'>
+              <button className="btn nav-item" onClick={logOut} id='btn-logout' >
                <FiLogOut />
               </button>
             </div>
