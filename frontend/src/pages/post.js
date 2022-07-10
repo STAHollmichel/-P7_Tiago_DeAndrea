@@ -41,11 +41,11 @@ const SinglePost = () => {
   };
 
   useEffect(() => {
-    axios.get('http://localhost:3002/api/posts/' + params.id)
+    axios.get(process.env.REACT_APP_API + '/api/posts/' + params.id)
     .then((result) => {
       setPost(result.data);
     });
-    axios.get('http://localhost:3002/api/auth')
+    axios.get(process.env.REACT_APP_API + '/api/auth')
     .then(({ data }) => {
       setUser(data.user);
     });
@@ -53,7 +53,7 @@ const SinglePost = () => {
 
   const deletePost = () => {
     axios
-      .delete('http://localhost:3002/api/posts/' + params.id)
+      .delete(process.env.REACT_APP_API + '/api/posts/' + params.id)
       .then((result) => {
         alert('Post Suprimé!');
         navigate('/');
@@ -99,7 +99,7 @@ const SinglePost = () => {
                   {user && (user.admin || user.id === post.userId) ? (
                     <>
                       <div className='navbar navbar-expand-md'>
-                        <button class="navbar-toggler collapsed btn-collapsed-nav" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-post-options"
+                        <button className="navbar-toggler collapsed btn-collapsed-nav" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-post-options"
                       aria-controls="collapseExample" aria-expanded="false" aria-label="Toggle navigation" id="btn-post-options-collapse">
                         <FaEllipsisH />
                         </button>
@@ -125,13 +125,15 @@ const SinglePost = () => {
           <div className={`popup_postEdit ${togglePopup ? 'open-popup_postEdit' : ''}`}
             id="popup">
                 <div className='card border shadow'>
-                  <div className='d-flex '>
-                    <div className='p-3'>
+                  <div className='d-flex justify-content-end'>
+                    <p onClick={openPopupPostEdit} className='btn pt-3 ' id='btn-close-edit-post'>
+                      <FaRegWindowClose />
+                    </p>
+                  </div>
+                  <div>
+                    <div className='p-3' id='icon-post-edit' >
                       <FaRegEdit />
                     </div>
-                    <p onClick={openPopupPostEdit} className='btn pt-3 d-flex' id='btn-close-edit-post'>
-                    <FaRegWindowClose />
-                    </p>
                   </div>
                   <PostFormModify id={post.id} />
                   </div>

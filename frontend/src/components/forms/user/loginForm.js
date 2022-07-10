@@ -12,7 +12,7 @@ function LoginForm() {
         console.log(data);
   
         axios
-            .post("http://localhost:3002/api/auth/login", {
+            .post(process.env.REACT_APP_API + '/api/auth/login', {
                 email: data.email,
                 password: data.password,
             })

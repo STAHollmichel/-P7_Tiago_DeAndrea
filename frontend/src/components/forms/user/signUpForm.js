@@ -16,10 +16,10 @@ function SignUpForm() {
     console.log(data);
 
     axios
-      .post("http://localhost:3002/api/auth/signup", data)
+      .post(process.env.REACT_APP_API + '/api/auth/signup', data)
       .then((result) => {
         axios
-          .post("http://localhost:3002/api/auth/login", {
+          .post(process.env.REACT_APP_API + '/api/auth/login', {
           email: data.email,
           password: data.password,
           })

@@ -13,7 +13,7 @@ function CommentDisplay(props) {
   const params = useParams();
 
   const deleteComment = (commentId) => {
-    axios.delete("http://localhost:3002/api/comments/" + commentId)
+    axios.delete(process.env.REACT_APP_API + '/api/comments/' + commentId)
     .then((result) => {
         alert("Comment Suprimé");
         window.location.reload();
@@ -23,7 +23,7 @@ function CommentDisplay(props) {
   useEffect(() => {
     
     axios
-      .get("http://localhost:3002/api/comments/" + props.postId)
+      .get(process.env.REACT_APP_API + '/api/comments/' + props.postId)
       .then((comments) => {
         setComments(comments.data.comments);
       })

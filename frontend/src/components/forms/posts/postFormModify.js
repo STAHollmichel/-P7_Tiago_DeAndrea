@@ -22,7 +22,7 @@ function ModifyPost(props) {
     formdata.append('image', file);
 
     axios
-      .put('http://localhost:3002/api/posts/' + props.id, formdata)
+      .put(process.env.REACT_APP_API + '/api/posts/' + props.id, formdata)
       .then((result) => {
         window.location.reload();
       })
@@ -37,6 +37,7 @@ function ModifyPost(props) {
             {...register('postDescription')}
             className="form-control"
             id="InputPost1"
+            placeholder='Que voulez-vous éditer ?'
           />
         </div>
         <div className='container pb-2 border-top d-flex justify-content-evenly'>

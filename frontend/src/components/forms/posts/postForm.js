@@ -21,7 +21,7 @@ function PostForm() {
     formdata.append('image', file);
 
     axios
-      .post('http://localhost:3002/api/posts/', formdata)
+      .post(process.env.REACT_APP_API + '/api/posts/', formdata)
       .then((result) => {
         window.location.reload();
         console.log(result);

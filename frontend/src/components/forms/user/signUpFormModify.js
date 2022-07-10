@@ -10,7 +10,7 @@ function SignUpFormModify(props) {
       window.alert("Profile modifié!");
       console.log(data);
       axios
-          .put("http://localhost:3002/api/auth/" + props.auth, data)
+          .put(process.env.REACT_APP_API + '/api/auth/' + props.auth, data)
           .then(
               (result) => {
               window.location.reload();

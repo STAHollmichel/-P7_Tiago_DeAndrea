@@ -1,14 +1,15 @@
 import '../custom.css';
+
 import { RiCakeFill, RiFileUserLine } from "react-icons/ri";
 import { useState, useEffect } from "react";
 import axios from "axios";
-
+import { useNavigate } from 'react-router-dom';
 
 import Footer from '../components/layout/footer';
 import Nav from '../components/layout/nav';
-
 import SignUpFormModify from '../components/forms/user/signUpFormModify';
 import { FaBriefcase, FaUserEdit, FaUserSlash } from 'react-icons/fa';
+
 
 function AccountProfile() { 
 
@@ -21,19 +22,22 @@ function AccountProfile() {
 
     }
 
+    const navigate = useNavigate()
+
     const deleteAccount = () => {
         axios
-            .delete("http://localhost:3002/api/auth/")
+            .delete(process.env.REACT_APP_API + '/api/auth/')
             .then((res) => {
+                navigate ("/login")
                 console.log(res);
             })
             .catch((err) => console.log(err));
     }
-
+    
     useEffect(() => {
 
         axios
-            .get("http://localhost:3002/api/auth/")
+            .get(process.env.REACT_APP_API + '/api/auth/')
             .then((res) => {
                 console.log(res);
                 setUser(res.data.user);

@@ -16,7 +16,7 @@ function PostWall() {
 
   const like = (postId) => {
     axios
-      .post('http://localhost:3002/api/posts/' + postId + '/like')
+      .post(process.env.REACT_APP_API + '/api/posts/' + postId + '/like')
       .then((result) => {
         console.log(result);
         getPosts();
@@ -29,13 +29,12 @@ function PostWall() {
 
   const getPosts = () => {
     axios
-      .get('http://localhost:3002/api/posts')
+      .get(process.env.REACT_APP_API + '/api/posts')
       .then((posts) => {
         setPosts(posts.data);
       })
       .catch((err) => console.log(err));
   };
-
 
   return (
     <div className="container py-4 col-lg-4">
@@ -47,13 +46,11 @@ function PostWall() {
                   <article className='card__body p-3'>
                     <div className='container border-bottom d-flex justify-content-between'>
                       <div className='d-flex' id='wall-post-user-name'>
-                      {/* <NavLink to={`/account/${post.User.id}`}> */}
                         <NavLink to='/account'>
                           <FaUserAlt />
                           <h1 className='pt-2 ps-3'>{post.User.firstName} {post.User.lastName}</h1>
                         </NavLink>
                       </div>
-                      {/* <p className='pt-2 pe-3 text-muted' id='post-timestamp'>{post.createdAt}</p> */}
                     </div>
                     <div>
                       <p className='pt-3 px-3'>{post.postDescription}</p>
