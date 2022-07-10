@@ -217,6 +217,28 @@
     }
 }
 
+#btn-account-modify-submit {
+    position: relative;
+    color: $color_tertiary;
+    font-weight: 800;
+    svg { 
+        color: green;
+        position: absolute;
+        top: 10px;
+        left: 5px;
+
+    }
+    p { 
+         margin: 0;
+    }
+    &:hover {
+        border: 1px solid #ced4da;
+        background-color: #f8f9fa;
+        color: green;
+    }
+}
+
+
 
 #btn-comment-publish {
     position: relative;

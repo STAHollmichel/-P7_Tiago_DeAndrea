@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useForm } from 'react-hook-form';
+import { FaCheck } from 'react-icons/fa';
  
 function SignUpFormModify(props) {
 
@@ -49,9 +50,12 @@ function SignUpFormModify(props) {
           <label htmlFor='InputPassword1' className='form-label'>Password</label>
           <input {...register('password')} type='Password' className='form-control bg-light' id='InputPassword1'/>
         </div>
-        <button type='submit' value='Submit' className='btn btn-primary'>
-          <p>Modifier</p>
-        </button>
+        <div className='d-flex justify-content-center pb-3'>
+          <button type='submit' value='Submit' className='btn' id='btn-account-modify-submit'>
+            <FaCheck />
+            <p className='ps-4'>Modifier</p>
+          </button>
+        </div>
       </form>
     );
   }
