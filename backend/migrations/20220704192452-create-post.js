@@ -4,20 +4,21 @@ module.exports = {
 
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('Posts', {
-
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       userId: {
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {
             model: 'Users',
-            key: 'id'
-        },
+            key: 'id',
+          },
+        onDelete: 'CASCADE',
+        onUpdate: 'CASCADE'
       },
       postDescription: {
         type: Sequelize.TEXT

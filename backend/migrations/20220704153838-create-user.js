@@ -35,9 +35,6 @@ module.exports = {
       profession: {
         type: Sequelize.STRING
       },
-      profilePhoto: {
-        type: Sequelize.STRING
-      },
       bio: {
         type: Sequelize.TEXT
       },

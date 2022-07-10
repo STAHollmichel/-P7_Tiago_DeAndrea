@@ -4,7 +4,6 @@ module.exports = {
 
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('Comments', {
-
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -13,12 +12,13 @@ module.exports = {
       },
       userId: {
         type: Sequelize.INTEGER,
-          allowNull: false,
-          references: {
+        allowNull: false,
+        references: {
             model: 'Users',
             key: 'id'
           },
-            onDelete: 'CASCADE'
+        onDelete: 'CASCADE',
+        onUpdate: 'CASCADE'
       },
       postId: {
         type: Sequelize.INTEGER,
@@ -27,7 +27,8 @@ module.exports = {
             model: 'Posts',
               key: 'id'
           },
-        onDelete: 'CASCADE'
+        onDelete: 'CASCADE',
+        onUpdate: 'CASCADE'
       },
       commentDescription: {
         type: Sequelize.TEXT,
@@ -42,6 +43,7 @@ module.exports = {
         type: Sequelize.DATE
       }
     });
+    
   },
   
   async down(queryInterface, Sequelize) {

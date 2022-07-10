@@ -30,7 +30,6 @@ module.exports = (sequelize, DataTypes) => {
       allowNull:false,
     },
     profession: DataTypes.STRING,
-    profilePhoto: DataTypes.STRING,
     bio: DataTypes.TEXT,
     admin: {
       type: DataTypes.BOOLEAN,

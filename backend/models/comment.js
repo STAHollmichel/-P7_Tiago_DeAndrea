@@ -9,8 +9,8 @@ module.exports = (sequelize, DataTypes) => {
   class Comment extends Model {
     
     static associate(models) {
-      Comment.belongsTo(models.User, { foreignKey: 'userId' })
-      Comment.belongsTo(models.Post, { foreignKey: 'postId' })
+      Comment.belongsTo(models.User, {foreignKey: 'userId', constraints: false}, { onDelete: 'CASCADE', onUpdate: 'CASCADE', hooks:true })
+      Comment.belongsTo(models.Post, {foreignKey: 'postId', constraints: false}, { onDelete: 'CASCADE', onUPdate: 'CASCADE', hooks:true })
     }
   }
 
