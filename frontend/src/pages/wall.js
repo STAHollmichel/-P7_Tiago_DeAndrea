@@ -7,12 +7,10 @@ import { Link, NavLink } from 'react-router-dom';
 import axios from 'axios';
 
 
-
-
 function PostWall() {
     
   const [posts, setPosts] = useState([]);
-  // const [date, setDate] = useState([]);
+  
 
   console.log(posts);
 
@@ -39,19 +37,6 @@ function PostWall() {
   };
 
 
-  // const currentTimestamp = () => {
-  //   axios
-  //     .get('http://localhost:3002/api/posts' )
-  //     .then((post) => {
-  //       setDate(post.createdAt);
-  //     })
-  //    date = new Intl.DateTimeFormat('en-US', { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit' }).format(currentTimestamp);
-  // };
-
-
-
-
-
   return (
     <div className="container py-4 col-lg-4">
       {posts.length
@@ -62,7 +47,8 @@ function PostWall() {
                   <article className='card__body p-3'>
                     <div className='container border-bottom d-flex justify-content-between'>
                       <div className='d-flex' id='wall-post-user-name'>
-                        <NavLink to="/account">
+                      {/* <NavLink to={`/account/${post.User.id}`}> */}
+                        <NavLink to='/account'>
                           <FaUserAlt />
                           <h1 className='pt-2 ps-3'>{post.User.firstName} {post.User.lastName}</h1>
                         </NavLink>
@@ -73,10 +59,12 @@ function PostWall() {
                       <p className='pt-3 px-3'>{post.postDescription}</p>
                     </div>
                   </article>
+                  {post.postPhoto ? (
                 <picture className='pt-1 '>
                   <img src={post.postPhoto} className="card-img-fluid border-top border-bottom" alt="Post"
                   />
                 </picture>
+                  ) : null}
                 <div className="card-body text-center">
                   <div className='border-top d-flex justify-content-between'>
                     <Link to={`/post/${post.id}`}>
