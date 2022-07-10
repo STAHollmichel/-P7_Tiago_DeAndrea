@@ -42,16 +42,18 @@ function PostForm() {
               <textarea
                 {...register('postDescription')}
                 placeholder="Que voulais-vous dire?"
-                class="form-control bg-light ps-4 rounded-pill"
+                className="form-control bg-light ps-4 rounded-pill"
                 id="InputPost1"
               />
             </div>
-            <div className="border-top d-flex justify-content-evenly">
-              <FileUploaderBtn handleFile={handleFile} />
-              <button type="submit" value="Submit" className="btn d-flex " id='btn-publish'>
-                <FaRegPaperPlane />
-                <p>Publier</p>
-              </button>
+            <div className="border-top">
+              <div className='d-flex justify-content-evenly pt-2'>
+                <FileUploaderBtn handleFile={handleFile} />
+                  <button type="submit" value="Submit" className="btn d-flex " id='btn-publish'>
+                    <FaRegPaperPlane />
+                    <p>Publier</p>
+                  </button>
+              </div>
             </div>
           </form>
         </div>
