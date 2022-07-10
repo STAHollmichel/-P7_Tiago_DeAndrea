@@ -227,6 +227,7 @@ a:-webkit-any-link {
 }
 
 #btn-close-edit-post svg {
+  color: #4E5166;
   font-size: large;
   font-weight: 800;
 }
@@ -576,7 +577,13 @@ a:-webkit-any-link {
 }
 
 #main_signup {
+  min-height: 70vh;
   text-align: center;
+}
+
+#signup-logo {
+  max-width: 100px;
+  max-height: 100px;
 }
 
 #main-account {
@@ -704,7 +711,12 @@ a:-webkit-any-link {
   left: -10px;
 }
 
+#icon-post-edit svg {
+  color: #4E5166;
+}
+
 #main-home {
+  min-height: 70vh;
   -webkit-box-shadow: inset 0px 10px 10px -15px #4E5166, inset 0px -10px 15px -10px #4E5166;
           box-shadow: inset 0px 10px 10px -15px #4E5166, inset 0px -10px 15px -10px #4E5166;
 }

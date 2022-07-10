@@ -6,7 +6,7 @@ import { FiLogOut  } from "react-icons/fi";
 
 import { NavLink, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import "bootstrap/js/src/collapse.js";
+import 'bootstrap/js/src/collapse.js';
 
 
 function Nav() {

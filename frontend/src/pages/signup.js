@@ -1,4 +1,6 @@
 import '../custom.css';
+import logoIcon from '../assets/images/icon.svg';
+
 import SignUpForm from '../components/forms/user/signUpForm';
 import LoginFooter from '../components/layout/login_footer';
 
@@ -9,7 +11,8 @@ function Signup() {
                 <div className='container-sm py-4 col-9'>
                     <section className='card py-3 border shadow' id='signup-card'>
                         <div className='card-body'>
-                            <h1>Bienvenue! Inscrivez-vouz chez Groupo Mania</h1>
+                            <img src={logoIcon}  alt='Groupomania signup logo' id='signup-logo' />
+                            <h1>Bienvenue! Inscrivez-vouz chez Groupomania</h1>
                             <SignUpForm />
                         </div>
                     </section>
