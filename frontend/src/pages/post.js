@@ -1,4 +1,5 @@
-import { FaRegCommentDots, FaRegEdit, FaRegWindowClose, FaTrashAlt, FaUserAlt } from 'react-icons/fa';
+import { FaEllipsisH, FaRegCommentDots, FaRegEdit, FaRegWindowClose, FaTrashAlt, FaUserAlt } from 'react-icons/fa';
+import "bootstrap/js/src/collapse.js";
 
 import axios from 'axios';
 import { useState, useEffect } from 'react';
@@ -22,6 +23,14 @@ const SinglePost = () => {
 
   const [post, setPost] = useState();
   const [user, setUser] = useState();
+
+  const [commentForm, setCommentForm] = useState(false);
+
+  const toggleCommentForm = () => {
+
+      setCommentForm (!commentForm);
+
+  }
 
   const [togglePopup, setTogglepopup] = useState(false);
 
@@ -50,17 +59,17 @@ const SinglePost = () => {
       });
   };
 
-  const commentPost = () => {
-    navigate('/comment_create/' + post.id);
-  };
+  // const commentPost = () => {
+  //   navigate('/comment_create/' + post.id);
+  // };
 
   if (post) {
     return (
       <div className="page__wrapper">
         <Nav />
         <main className="container-fluid bg-light" id="main-post">
-          <div className="container pt-3 col-lg-4">
-            <section className="card mb-4 border shadow-sm">
+          <div className="container pb-4 pt-3 col-lg-4">
+            <section className="card border shadow-sm">
               <article className='card__body p-3'>
                 <div className='container border-bottom d-flex justify-content-between'>
                   <div className='d-flex' id='post-user-icon'>
@@ -73,18 +82,25 @@ const SinglePost = () => {
                   <p className='p-3'>{post.postDescription}</p>
                 </div>
               </article>
-              <picture>
-                <img src={post.postPhoto} className="card-img-fluid border-top border-bottom" alt="Post" />
-              </picture>
+              {post.postPhoto ? (
+                <picture>
+                 <img src={post.postPhoto} 
+                    className="card-img-fluid border-top border-bottom" alt="Post" 
+                 />
+                </picture>
+              ) : null}
               <div className="card-body">
                 <div className='border-top d-flex justify-content-between'>
-                  <button onClick={commentPost} className="d-flex btn m-2" id='btn-post-comment'>
+                  <button onClick={toggleCommentForm} className="d-flex btn m-2" id='btn-post-comment'>
                     <FaRegCommentDots />
                     <p className='ps-4'>Commenter</p>
                   </button>
                   {user && (user.admin || user.id === post.userId) ? (
                     <>
-                      <div className='d-flex'>
+                      <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-bs-expanded="false" aria-bs-controls="collapseExample">
+                        <FaEllipsisH />
+                      </button>
+                      <div className='d-flex collapse' id="collapseExample">
                         <button onClick={openPopupPostEdit} className="btn m-2 d-flex" id='btn-post-edit'>
                           <FaRegEdit />
                           <p className='ps-4'>Editer</p>
@@ -98,7 +114,7 @@ const SinglePost = () => {
                   ) : null}
                 </div>
               </div>
-              <CommentForm postId={post.id} />
+              {commentForm ? <CommentForm postId={post.id}/> : null}
               <CommentDisplay postId={post.id} />
             </section>
           </div>
