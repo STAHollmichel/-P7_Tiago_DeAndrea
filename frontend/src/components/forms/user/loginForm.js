@@ -34,7 +34,7 @@ function LoginForm() {
                 </div>
                 <div>
                     <input {...register('password', { required: true, minLength: 4 })} type="password" className="form-control bg-light"  placeholder="Mot de passe"/>
-                    { errors.password && <p>Le mot de passe est requis !</p> }
+                    { errors.password && <p>Le mot de passe est requis ! </p> }
                 </div>
                 <div>
                     <button type="submit" value="Submit" className='w-100 btn btn-lg mt-3' id='btn-login'>Se connecter</button>

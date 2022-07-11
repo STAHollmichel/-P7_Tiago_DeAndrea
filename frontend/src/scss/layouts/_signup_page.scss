@@ -7,3 +7,14 @@
     max-width: 100px;
     max-height: 100px;
 }
+
+.color-alert {
+     color: #bf1650;
+     padding-top: 10px;
+     
+     &:before {
+        display: inline;
+        content: "⚠ ";
+        padding-inline-end: 5px;
+      }
+}

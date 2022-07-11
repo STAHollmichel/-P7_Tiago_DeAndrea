@@ -78,7 +78,7 @@ function AccountProfile() {
                                             <h2>Bio</h2>
                                         </div>
                                     </div>
-                                    <p className='tex-start'>{user.bio}</p>
+                                    <p className='text-start text-wrap text-break'>{user.bio}</p>
                                 </div>
                                 {user && (user.admin || user.id ) ? (
                                     <>

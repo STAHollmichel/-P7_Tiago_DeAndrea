@@ -521,6 +521,8 @@ a:-webkit-any-link {
 }
 
 .form-signin input {
+  padding-top: 15px;
+  padding-bottom: 15px;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   -moz-appearance: none;
@@ -592,6 +594,18 @@ a:-webkit-any-link {
 #signup-logo {
   max-width: 100px;
   max-height: 100px;
+}
+
+.color-alert {
+  color: #bf1650;
+  padding-top: 10px;
+}
+
+.color-alert:before {
+  display: inline;
+  content: "⚠ ";
+  -webkit-padding-end: 5px;
+          padding-inline-end: 5px;
 }
 
 #main-account {

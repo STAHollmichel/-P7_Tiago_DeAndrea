@@ -44,7 +44,7 @@ function SignUpForm() {
             <p className='ps-1 form-required red-required'>*</p>
           </label>
           <input {...register('firstName', { required: true, maxLength: 20, pattern: /^[A-Za-z]+$/i })} type='text' className='form-control bg-light' id='FirstName'/>
-          {errors.firstName && "Le prénom est requis"}
+          {errors.firstName && <p className='color-alert'>Le prénom est requis!</p>}
         </div>
         <div className='mb-3'>
           <label htmlFor='InputLastName1' className='form-label d-flex'>
@@ -52,7 +52,7 @@ function SignUpForm() {
             <p className='ps-1 form-required red-required'>*</p>
           </label>
           <input {...register('lastName', { required: true, maxLength: 20, patttern: /^[A-Za-z]+$/i })} type='text' className='form-control bg-light' id='InputLastName'/>
-          {errors.lastName && "Le nom de famille est requis"}
+          {errors.lastName && <p className='color-alert'>Le nom de famille est requis!</p>}
         </div>
         <div className='mb-3'>
           <label htmlFor='InputAge1' className='form-label'>Age</label>
@@ -72,7 +72,7 @@ function SignUpForm() {
             <p className='ps-1 form-required red-required'>*</p> 
           </label>
           <input {...register('email', { required: true })} type='email' className='form-control bg-light' id='InputEmail1'/>
-          {errors.email && "L'e-mail est requis"}
+          {errors.email && <p className='color-alert'>L'e-mail est requis </p>}
         </div>
         <div className='mb-3'>
           <label htmlFor='InputPassword1' className='form-label d-flex'>
@@ -80,7 +80,7 @@ function SignUpForm() {
             <p className='ps-1 form-required red-required'>*</p>
           </label>
           <input {...register('password', { required: true, minLength: 6 })} type='Password' className='form-control bg-light' id='InputPassword1'/>
-          {errors.password && "Le mot de passe est requis"}
+          {errors.password && <p className='color-alert'>Le mot de passe est requis et doit être au moins composé de 6 chiffres !</p>}
         </div>
         <div className='d-flex required-info'>
           <p className='ps-1 form-required red-required'>*</p>
