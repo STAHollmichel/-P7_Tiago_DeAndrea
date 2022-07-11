@@ -62,6 +62,9 @@ Dépendances installées via NPM:
 
 ## Usage ##
 
+# important
+! Ajouter Dossier /backend/images S'il n'est pas disponible
+
 # Fichier `.env.dist`
 
 - Ouvrir les fichiers "/backend/.env.dist" + "/frontend/.env.dist"
@@ -69,6 +72,10 @@ Dépendances installées via NPM:
 - Dans le env backend: Insérer le host de l'API que vous avez choisi.
 - Modifier l'extension du fichier ".env.dist" par ".env".
 - La migration sequelize à votre DB sera alors possible.
+
+- Import de La DB SQL dans le dossier des livrables - Fichier: DeAndrea_Tiago_P7_bdd_022022.sql
+
+- Infos du Compte Admin dans le dossier des livrables - Fichier: DeAndrea_Tiago_P7_compte_admin_022022.txt
 
 # Exécuter dans le terminal : 
 
@@ -81,5 +88,5 @@ Dépendances installées via NPM:
 
 # Dans un troisième terminal et exécuter :
 - 1- `cd frontend`
-- 3- `npm install`
+- 2- `npm install`
 - 3- `npm start`

@@ -4,7 +4,7 @@ import PulseLoader from "react-spinners/PulseLoader";
 
 import axios from 'axios';
 import { useState, useEffect } from 'react';
-import { useNavigate, useParams, NavLink } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 import Nav from '../components/layout/nav';
 import Footer from '../components/layout/footer';
@@ -49,7 +49,7 @@ const SinglePost = () => {
     .then(({ data }) => {
       setUser(data.user);
     });
-  }, []);
+  }, [params.id]);
 
   const deletePost = () => {
     axios
@@ -73,10 +73,8 @@ const SinglePost = () => {
               <article className='card__body p-3'>
                 <div className='container border-bottom d-flex justify-content-between'>
                   <div className='d-flex' id='post-user-icon'>
-                    <NavLink to='/account'>
                       <FaUserAlt />
                       <h1 className='pt-2 ps-3'>{post.User.firstName} {post.User.lastName}</h1>
-                    </NavLink>
                   </div>
                 </div>
                 <div>
@@ -84,7 +82,7 @@ const SinglePost = () => {
                 </div>
               </article>
               {post.postPhoto ? (
-                <picture>
+                <picture className='d-flex justify-content-center'>
                  <img src={post.postPhoto} 
                     className="card-img-fluid border-top border-bottom" alt="Post" 
                  />

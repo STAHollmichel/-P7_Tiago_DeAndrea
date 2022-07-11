@@ -1,7 +1,7 @@
 // Styles
 import '../custom.css';
 import { RiCakeFill, RiFileUserLine } from "react-icons/ri";
-import { FaBriefcase, FaUserEdit, FaUserSlash } from 'react-icons/fa';
+import { FaBriefcase, FaUserSlash } from 'react-icons/fa';
 
 // React State & effect
 import { useState, useEffect } from "react";
@@ -13,20 +13,15 @@ import { useNavigate } from 'react-router-dom';
 // Components
 import Footer from '../components/layout/footer';
 import Nav from '../components/layout/nav';
-import SignUpFormModify from '../components/forms/user/signUpFormModify';
+
 
 
 
 function AccountProfile() { 
 
     const [user, setUser] = useState({});
-    const [modify, setModify] =useState(false)
 
-    const toggleModify = () => {
 
-        setModify(!modify);
-
-    }
 
     const navigate = useNavigate()
 
@@ -83,10 +78,6 @@ function AccountProfile() {
                                 {user && (user.admin || user.id ) ? (
                                     <>
                                         <div className='d-flex justify-content-end'>
-                                            <button onClick={toggleModify} className='btn m-2 d-flex' id='btn-account-edit'>
-                                                <FaUserEdit />
-                                                <p className='ps-4'>Editer le profile</p>
-                                            </button>
                                             <button onClick={deleteAccount} className='btn m-2 d-flex' id='btn-account-delete'>
                                                 <FaUserSlash/>
                                                 <p className='ps-4'>Effacer le profile</p>
@@ -94,7 +85,6 @@ function AccountProfile() {
                                         </div>
                                     </>
                                     ) : null}
-                                <SignUpFormModify modify={modify} />
                             </article>
                         </section>
                     </div>

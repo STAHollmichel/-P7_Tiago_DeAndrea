@@ -1,6 +1,6 @@
 const db = require('../models/index');
 
-const { Comment, Post } = db.sequelize.models;
+const { Comment, Post, User } = db.sequelize.models;
 
 
 exports.createComment = (req, res, next) => {

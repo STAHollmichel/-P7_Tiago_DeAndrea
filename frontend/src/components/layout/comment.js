@@ -1,7 +1,7 @@
 import "../../custom.css";
 
 import { useState, useEffect } from "react";
-import { useParams } from 'react-router-dom';
+
 import axios from "axios";
 import { FaTrashAlt, FaUserAlt } from "react-icons/fa";
 
@@ -9,8 +9,6 @@ function CommentDisplay(props) {
 
   const [comments, setComments] = useState([]);
   console.log(comments);
-
-  const params = useParams();
 
   const deleteComment = (commentId) => {
     axios.delete(process.env.REACT_APP_API + '/api/comments/' + commentId)
@@ -28,13 +26,13 @@ function CommentDisplay(props) {
         setComments(comments.data.comments);
       })
       .catch((err) => console.log(err));
-  }, []);
+  }, [props.postId]);
 
   return (
     <div className='container'>
       {comments.length
         ? comments.map((comment) => (
-            <section className='card mb-3'>
+            <section key={comment.id} className='card mb-3'>
               <article className='p-2'>
                 <div className='container' id='comment-card'>
                   <div className='d-flex' id='comment-user-icon'>

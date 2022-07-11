@@ -3,7 +3,7 @@ import { FiThumbsUp } from "react-icons/fi";
 import { FaRegEye, FaUserAlt } from 'react-icons/fa';
 
 import { useState, useEffect } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 
@@ -42,14 +42,12 @@ function PostWall() {
         ? posts.map((post) => {
             console.log(post.User);
             return (
-              <section className="card mb-4 border shadow-sm">
+              <section key={post.id} className="card mb-4 border shadow-sm">
                   <article className='card__body p-3'>
                     <div className='container border-bottom d-flex justify-content-between'>
                       <div className='d-flex' id='wall-post-user-name'>
-                        <NavLink to='/account'>
                           <FaUserAlt />
                           <h1 className='pt-2 ps-3'>{post.User.firstName} {post.User.lastName}</h1>
-                        </NavLink>
                       </div>
                     </div>
                     <div>
@@ -57,7 +55,7 @@ function PostWall() {
                     </div>
                   </article>
                   {post.postPhoto ? (
-                <picture className='pt-1 '>
+                <picture className='pt-1 d-flex justify-content-center '>
                   <img src={post.postPhoto} className="card-img-fluid border-top border-bottom" alt="Post"
                   />
                 </picture>
