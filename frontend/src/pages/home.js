@@ -1,8 +1,9 @@
+// Styles
 import '../custom.css';
 
+//Components
 import Nav from '../components/layout/nav';
 import Footer from '../components/layout/footer';
-
 import PostForm from '../components/forms/posts/postForm';
 import PostWall from './wall';
 

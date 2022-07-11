@@ -1,4 +1,4 @@
-
+// Login Page
 #btn-login {
     color: #fff;
     background-color: $color_primary;
@@ -21,6 +21,88 @@
 
 }
 
+// Signup Page
+
+#btn-singup-submit {
+    position: relative;
+    color: $color_tertiary;
+    font-weight: 800;
+    svg { 
+        color: green;
+        position: absolute;
+        top: 10px;
+        left: -11px;
+
+    }
+    p { 
+         margin: 0;
+    }
+    &:hover {
+        color: green;
+    }
+}
+
+#btn-account-modify-submit {
+    position: relative;
+    color: $color_tertiary;
+    font-weight: 800;
+    svg { 
+        color: green;
+        position: absolute;
+        top: 10px;
+        left: 5px;
+
+    }
+    p { 
+         margin: 0;
+    }
+    &:hover {
+        border: 1px solid #ced4da;
+        background-color: #f8f9fa;
+        color: green;
+    }
+}
+
+// Account Page
+
+#btn-account-edit {
+    position: relative;
+    color: $color_tertiary;
+    font-weight: 800;
+    svg { 
+        position: absolute;
+        top: 10px;
+        left: 10px;
+
+    }
+    p { 
+         margin: 0;
+    }
+    &:hover {
+        color: $color_primary;
+    }
+}
+
+#btn-account-delete {
+    position: relative;
+    color: red;
+    font-weight: 800;
+    svg { 
+        position: absolute;
+        top: 10px;
+        left: 10px;
+
+    }
+    p { 
+         margin: 0;
+    }
+    &:hover {
+        color: $color_secondary;
+    }
+
+}
+
+// Wall (Post-Form)
 
 #btn-publish {
     position: relative;
@@ -58,23 +140,10 @@
     }
 }
 
-.navbar-disconnect {
-    button {
-        color: $color_tertiary;
-        &:hover {
-            color: $color_primary;
-        }
-    }
-    #btn-logout{
-        svg {
-            stroke-width: 3;
-        }
-    }
-}
-
-// Post Buttons 
+// Wall (Post-Display)
 
 #btn-post-checkout{
+    
     position: relative;
     color: $color_tertiary;
     font-weight: 800;
@@ -117,6 +186,9 @@
     }
 }
 
+
+// Post Page
+
 #btn-post-comment {
     position: relative;
     color: $color_tertiary;
@@ -134,7 +206,6 @@
         color: $color_primary;
     }
 }
-
 
 #btn-post-edit {
     position: relative;
@@ -171,6 +242,12 @@
     }
 }
 
+#btn-post-options-collapse {
+    color: $color_tertiary;
+}
+
+
+// Post Modify component
 
 #btn-close-edit-post {
     svg { 
@@ -199,47 +276,8 @@
 }
 
 
-#btn-singup-submit {
-    position: relative;
-    color: $color_tertiary;
-    font-weight: 800;
-    svg { 
-        color: green;
-        position: absolute;
-        top: 10px;
-        left: -11px;
 
-    }
-    p { 
-         margin: 0;
-    }
-    &:hover {
-        color: green;
-    }
-}
-
-#btn-account-modify-submit {
-    position: relative;
-    color: $color_tertiary;
-    font-weight: 800;
-    svg { 
-        color: green;
-        position: absolute;
-        top: 10px;
-        left: 5px;
-
-    }
-    p { 
-         margin: 0;
-    }
-    &:hover {
-        border: 1px solid #ced4da;
-        background-color: #f8f9fa;
-        color: green;
-    }
-}
-
-
+// Comment Component
 
 #btn-comment-publish {
     position: relative;
@@ -280,45 +318,20 @@
     }
 }
 
-#btn-account-edit {
-    position: relative;
-    color: $color_tertiary;
-    font-weight: 800;
-    svg { 
-        position: absolute;
-        top: 10px;
-        left: 10px;
+// Nav
 
+.navbar-disconnect {
+    button {
+        color: $color_tertiary;
+        &:hover {
+            color: $color_primary;
+        }
     }
-    p { 
-         margin: 0;
+    #btn-logout{
+        svg {
+            stroke-width: 3;
+        }
     }
-    &:hover {
-        color: $color_primary;
-    }
-}
-
-#btn-account-delete {
-    position: relative;
-    color: red;
-    font-weight: 800;
-    svg { 
-        position: absolute;
-        top: 10px;
-        left: 10px;
-
-    }
-    p { 
-         margin: 0;
-    }
-    &:hover {
-        color: $color_secondary;
-    }
-
-}
-
-#btn-post-options-collapse {
-    color: $color_tertiary;
 }
 
 #btn-nav-collapse {

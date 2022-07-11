@@ -1,14 +1,20 @@
+// Styles
 import '../custom.css';
-
 import { RiCakeFill, RiFileUserLine } from "react-icons/ri";
+import { FaBriefcase, FaUserEdit, FaUserSlash } from 'react-icons/fa';
+
+// React State & effect
 import { useState, useEffect } from "react";
+
+// Routing
 import axios from "axios";
 import { useNavigate } from 'react-router-dom';
 
+// Components
 import Footer from '../components/layout/footer';
 import Nav from '../components/layout/nav';
 import SignUpFormModify from '../components/forms/user/signUpFormModify';
-import { FaBriefcase, FaUserEdit, FaUserSlash } from 'react-icons/fa';
+
 
 
 function AccountProfile() { 

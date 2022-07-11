@@ -1,20 +1,12 @@
-// Variables Override
-$theme-colors: (
-    "primairy": #FD2D01,
-    "secondary": #FFD7D7,
-    "tertiary": #4E5166,
-);
-
-
-// Import de Bootstrap et les variables par default 
-// @import "~bootstrap/scss/bootstrap";
-
+// Abstracts
 @import './scss/abstracts/_variables.scss';
 
+// Base
 @import './scss/base/_typography.scss';
 @import './scss/base/_body.scss';
 @import './scss/base/_main.scss';
 
+//Components
 @import './scss/components/_buttons.scss';
 @import './scss/components/_nav';
 @import './scss/components/_login_footer.scss';
@@ -22,6 +14,7 @@ $theme-colors: (
 @import './scss/components/_signup_form.scss';
 @import './scss/components/_comment_form.scss';
 
+//Layout
 @import './scss/layouts/_login_page.scss';
 @import './scss/layouts/_signup_page.scss';
 @import './scss/layouts/_account_page.scss';

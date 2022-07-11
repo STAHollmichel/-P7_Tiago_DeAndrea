@@ -65,6 +65,90 @@ a:-webkit-any-link {
   color: #4E5166;
 }
 
+#btn-singup-submit {
+  position: relative;
+  color: #4E5166;
+  font-weight: 800;
+}
+
+#btn-singup-submit svg {
+  color: green;
+  position: absolute;
+  top: 10px;
+  left: -11px;
+}
+
+#btn-singup-submit p {
+  margin: 0;
+}
+
+#btn-singup-submit:hover {
+  color: green;
+}
+
+#btn-account-modify-submit {
+  position: relative;
+  color: #4E5166;
+  font-weight: 800;
+}
+
+#btn-account-modify-submit svg {
+  color: green;
+  position: absolute;
+  top: 10px;
+  left: 5px;
+}
+
+#btn-account-modify-submit p {
+  margin: 0;
+}
+
+#btn-account-modify-submit:hover {
+  border: 1px solid #ced4da;
+  background-color: #f8f9fa;
+  color: green;
+}
+
+#btn-account-edit {
+  position: relative;
+  color: #4E5166;
+  font-weight: 800;
+}
+
+#btn-account-edit svg {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+#btn-account-edit p {
+  margin: 0;
+}
+
+#btn-account-edit:hover {
+  color: #FD2D01;
+}
+
+#btn-account-delete {
+  position: relative;
+  color: red;
+  font-weight: 800;
+}
+
+#btn-account-delete svg {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+#btn-account-delete p {
+  margin: 0;
+}
+
+#btn-account-delete:hover {
+  color: #FFD7D7;
+}
+
 #btn-publish {
   position: relative;
   color: #4E5166;
@@ -103,18 +187,6 @@ a:-webkit-any-link {
 
 #btn-photo-upload:hover {
   color: #FD2D01;
-}
-
-.navbar-disconnect button {
-  color: #4E5166;
-}
-
-.navbar-disconnect button:hover {
-  color: #FD2D01;
-}
-
-.navbar-disconnect #btn-logout svg {
-  stroke-width: 3;
 }
 
 #btn-post-checkout {
@@ -226,6 +298,10 @@ a:-webkit-any-link {
   color: #FD2D01;
 }
 
+#btn-post-options-collapse {
+  color: #4E5166;
+}
+
 #btn-close-edit-post svg {
   color: #4E5166;
   font-size: large;
@@ -250,50 +326,6 @@ a:-webkit-any-link {
 
 #btn-publish-modified-post:hover {
   color: #FD2D01;
-}
-
-#btn-singup-submit {
-  position: relative;
-  color: #4E5166;
-  font-weight: 800;
-}
-
-#btn-singup-submit svg {
-  color: green;
-  position: absolute;
-  top: 10px;
-  left: -11px;
-}
-
-#btn-singup-submit p {
-  margin: 0;
-}
-
-#btn-singup-submit:hover {
-  color: green;
-}
-
-#btn-account-modify-submit {
-  position: relative;
-  color: #4E5166;
-  font-weight: 800;
-}
-
-#btn-account-modify-submit svg {
-  color: green;
-  position: absolute;
-  top: 10px;
-  left: 5px;
-}
-
-#btn-account-modify-submit p {
-  margin: 0;
-}
-
-#btn-account-modify-submit:hover {
-  border: 1px solid #ced4da;
-  background-color: #f8f9fa;
-  color: green;
 }
 
 #btn-comment-publish {
@@ -340,48 +372,16 @@ a:-webkit-any-link {
   color: #FD2D01;
 }
 
-#btn-account-edit {
-  position: relative;
+.navbar-disconnect button {
   color: #4E5166;
-  font-weight: 800;
 }
 
-#btn-account-edit svg {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-}
-
-#btn-account-edit p {
-  margin: 0;
-}
-
-#btn-account-edit:hover {
+.navbar-disconnect button:hover {
   color: #FD2D01;
 }
 
-#btn-account-delete {
-  position: relative;
-  color: red;
-  font-weight: 800;
-}
-
-#btn-account-delete svg {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-}
-
-#btn-account-delete p {
-  margin: 0;
-}
-
-#btn-account-delete:hover {
-  color: #FFD7D7;
-}
-
-#btn-post-options-collapse {
-  color: #4E5166;
+.navbar-disconnect #btn-logout svg {
+  stroke-width: 3;
 }
 
 #btn-nav-collapse {

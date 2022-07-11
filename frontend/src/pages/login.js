@@ -1,5 +1,10 @@
+// Styles
 import '../custom.css';
+
+// Assets
 import logo from '../assets/images/icon-above-font.svg';
+
+// Components
 import LoginForm from '../components/forms/user/loginForm';
 import LoginFooter from '../components/layout/login_footer';
 
