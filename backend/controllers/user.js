@@ -6,7 +6,7 @@ const db = require('../models/index');
 
 const { User } = db.sequelize.models;
 
-
+// User create
 exports.signup = (req, res, next) => {
     bcrypt.hash(req.body.password, 10)
         .then(hash => {
@@ -26,7 +26,7 @@ exports.signup = (req, res, next) => {
         .catch(error => res.status(500).json({ error }));
 };
 
-
+// User Login
 exports.login = (req, res, next) => {
     User.findOne({ where: {email: req.body.email}})
       .then(user => {
@@ -51,20 +51,20 @@ exports.login = (req, res, next) => {
       })
       .catch(error => res.status(500).json({ error }));
 };
-
+// Get User
 exports.getOneUser = (req, res, next) => {
     User.findOne({ where: { id: req.auth.userId } })
         .then(user => res.status(200).json({ user }))
         .catch(error => res.status(404).json({ error }));
 }
-
+// Update User data (Profile)
 exports.updateUser =(req, res, next) => {
   User.update({ where: { id: req.auth.userId } })
     .then(user => res.status(200).json({ user }))
     .catch(error => res.status(404).json({ error }));
 }
 
-
+// Delete User (profile)
 exports.deleteUser = (req, res, next) => {
   console.log(req.auth.userId);
   User.findOne({ where: {id: req.auth.userId} })
