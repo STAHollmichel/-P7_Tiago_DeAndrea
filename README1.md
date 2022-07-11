@@ -65,7 +65,8 @@ Dépendances installées via NPM:
 # Fichier `.env.dist`
 
 - Ouvrir les fichiers "/backend/.env.dist" + "/frontend/.env.dist"
-- Insérer nom, mot de passe, nom de votre DB et host.
+- Dans le env backend: Insérer nom, mot de passe, nom de votre DB et host.
+- Dans le env backend: Insérer le host de l'API que vous avez choisi.
 - Modifier l'extension du fichier ".env.dist" par ".env".
 - La migration sequelize à votre DB sera alors possible.
 
@@ -78,7 +79,7 @@ Dépendances installées via NPM:
 - 1- `cd backend`
 - 2- `nodemon`
 
-# Dans un autre terminal et exécuter :
+# Dans un troisième terminal et exécuter :
 - 1- `cd frontend`
 - 3- `npm install`
 - 3- `npm start`

@@ -520,6 +520,14 @@ a:-webkit-any-link {
   margin: auto;
 }
 
+.form-signin input {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+}
+
 .form-signin .form-floating:focus-within {
   z-index: 2;
 }
